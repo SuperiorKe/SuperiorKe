@@ -5,8 +5,6 @@
 📫 How to reach me ... Visit my website : http://superiorwech.netlify.app
 😄 Pronouns: ... Mr.
 ⚡ Fun fact: ... I'm a mechanic.
-
-
 <!---
 SuperiorKe/SuperiorKe is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
