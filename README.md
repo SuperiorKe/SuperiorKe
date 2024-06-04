@@ -3,7 +3,7 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=superior" alt="superior" /></a> </p>
 
-- 🔭 I’m currently working on [Chatbot](https://github.com/SuperiorKe/django_chatbot)
+- 🔭 I’m currently working on [A Chatbot](https://github.com/SuperiorKe/django_chatbot)
 
 - 🌱 I’m currently learning **django, SQL, Bash**
 
