@@ -1,7 +1,8 @@
 <h1 align="center">Hi 👋, I'm Kenn</h1>
 <h3 align="center">A passionate back-end developer from Kenya</h3>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=superior" alt="superior" /></a> </p>
+<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=superior &theme=onedark" alt="superior" /></a> </p>
+
 
 - 🔭 I’m currently working on [A Chatbot](https://github.com/SuperiorKe/django_chatbot)
 
