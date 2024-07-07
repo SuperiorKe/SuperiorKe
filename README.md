@@ -4,7 +4,7 @@
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=superior &theme=onedark" alt="superior" /></a> </p>
 
 
-- 🔭 I’m currently working on [AI-Image-Generation]((https://github.com/SuperiorKe/Image-Generator))
+- 🔭 I’m currently working on [AI-Image-Generation](https://github.com/SuperiorKe/Image-Generator)
 
 - 🌱 I’m currently learning **django, SQL, Bash**
 
