@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Kenn Waweru</h1>
-<h3 align="center">A software Developer from Kenya</h3>
+<h3 align="center">Senior Back-End Developer</h3>
 
 - 🔭 I’m currently working on [A django chatbot using OpenAI](https://github.com/SuperiorKe/django_chatbot)
 
