@@ -1,17 +1,17 @@
 <h1 align="center">Hi 👋, I'm Kenn Waweru</h1>
 <h3 align="center">Senior Back-End Developer</h3>
 
-- 🔭 I’m currently working on [A django chatbot using OpenAI](https://github.com/SuperiorKe/django_chatbot)
+- 🔭 I’m currently working on https://github.com/SuperiorKe/Budgeter-Tracking-App.git
 
-- 🌱 I’m currently learning **Back-End Development,LLMs, APIs, AI**
+- 🌱 I’m currently learning **Amazon Web Services**
 
-- 👯 I’m looking to collaborate on [AI and Machine learning](https://github.com/SuperiorKe/Image-Generator)
+- 👯 I’m looking to collaborate on [Web Development]([https://github.com/SuperiorKe/Image-Generator](https://github.com/SuperiorKe/Budgeter-Tracking-App.git))
 
 - 🤝 I’m looking for help with [https://github.com/SuperiorKe/Image-Generator](https://github.com/SuperiorKe/Image-Generator)
 
 - 👨‍💻 All of my projects are available at [superiorwech.netlify.app](superiorwech.netlify.app)
 
-- 💬 Ask me about **Back-End Development,LLMs, APIs, AI**
+- 💬 Ask me about **Back-End Development,Cloud Computing, APIs, AI**
 
 - 📫 How to reach me **superiorwech@gmail.com**
 
