@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Kenn Waweru</h1>
 <h3 align="center">Senior Back-End Developer</h3>
 
-- 🔭 I’m currently working on https://github.com/SuperiorKe/Budgeter-Tracking-App.git
+- 🔭 I’m currently working on https://github.com/SuperiorKe/Budgeter-Tracking-App
 
 - 🌱 I’m currently learning **Amazon Web Services**
 
