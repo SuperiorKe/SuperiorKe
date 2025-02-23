@@ -1,6 +1,6 @@
 <div align="center">
 
-# 👨‍💻 [Your Name] | Software Engineer
+# 👨‍💻 [Kenn Macharia] | Software Engineer
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&width=435&lines=Full+Stack+Developer;Cloud+Architecture+Enthusiast;Open+Source+Contributor;Always+Learning+New+Technologies)](https://git.io/typing-svg)
 
