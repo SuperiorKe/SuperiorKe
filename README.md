@@ -10,8 +10,8 @@
 [![Portfolio](https://img.shields.io/badge/Portfolio-255E63?style=for-the-badge&logo=About.me&logoColor=white)](superiorke.netlify.app)
 [![Blog](https://img.shields.io/badge/Blog-FFA500?style=for-the-badge&logo=rss&logoColor=white)]([your-blog-url](https://medium.com/@superiorwech))
 
-[![GitHub followers](https://img.shields.io/github/followers/your-username?style=social)](https://github.com/superiorke)
-[![Profile Views](https://komarev.com/ghpvc/?username=your-username&color=brightgreen)](https://github.com/superiorke)
+[![GitHub followers](https://img.shields.io/github/followers/your-username?style=social)](https://github.com/SuperiorKe)
+[![Profile Views](https://komarev.com/ghpvc/?username=your-username&color=brightgreen)](https://github.com/SuperiorKe)
 
 </div>
 
