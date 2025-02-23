@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Kenn Waweru</h1>
+<h1 align="center">Hi 👋, I'm Kenn Macharia</h1>
 <h3 align="center">Senior Back-End Developer</h3>
 
 - 🔭 I’m currently working on https://github.com/SuperiorKe/Carbon_footprint_calculator
@@ -10,7 +10,7 @@
 
 - 🤝 I’m looking for help with [https://github.com/SuperiorKe/Image-Generator](https://github.com/SuperiorKe/Image-Generator)
 
-- 👨‍💻 All of my projects are available at [superiorwech.netlify.app](superiorwech.netlify.app)
+- 👨‍💻 All of my projects are available at [superiorwech.netlify.app](superiorke.netlify.app)
 
 - 💬 Ask me about **Back-End Development,Cloud Computing, APIs, AI**
 
