@@ -86,11 +86,9 @@ I'm a passionate Software Engineer with 5+ years of experience in building scala
 </table> -->
 
 ### 🏆 Certifications
-<!-- ![AWS Solutions Architect](https://img.shields.io/badge/AWS_Solutions_Architect_Associate-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Kubernetes CKAD](https://img.shields.io/badge/CKAD-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
-![Terraform Associate](https://img.shields.io/badge/Terraform_Associate-7B42BC?style=for-the-badge&logo=terraform&logoColor=white) -->
-[AWS Academy Cloud Foundations](https://www.credly.com/badges/dcb075b8-76f0-4078-be36-53e66cfaea51/public_url)
-[AWS Certified Cloud Practitioner](https://www.credly.com/badges/474bd22d-cc5e-4f54-af3a-a109a4f95a7c/public_url)
+![AWS Solutions Architect](https://img.shields.io/badge/AWS_Solutions_Architect_Associate-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![AWS Academy Cloud Foundations](https://www.credly.com/badges/dcb075b8-76f0-4078-be36-53e66cfaea51/public_url)
+![AWS Certified Cloud Practitioner](https://www.credly.com/badges/474bd22d-cc5e-4f54-af3a-a109a4f95a7c/public_url)
 
 
 ### 🚀 [Carbon_Footprint_Calculator](https://github.com/SuperiorKe/Carbon_Footprint_Calculator)
