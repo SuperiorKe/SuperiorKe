@@ -94,7 +94,7 @@ I'm a passionate Software Engineer with 5+ years of experience in building scala
 
 <div align="center">
 <a href="(https://superiorke.github.io/Carbon_Footprint_Calculator/)">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=superior&repo=Carbon_Footprint_Calculator&theme=tokyonight" />
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=superior&repo=https://github.com/SuperiorKe/Carbon_Footprint_Calculator&theme=tokyonight" />
 </a>
 <a href="project-link-2">
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=your-username&repo=project-2&theme=tokyonight" />
