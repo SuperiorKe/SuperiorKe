@@ -124,17 +124,7 @@ Real-time analytics platform with machine learning capabilities
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=superior&theme=tokyonight"/>
 </p>
 
-## 🎯 Current Focus
-```javascript
-const currentFocus = {
-    learning: ["Rust", "WebAssembly", "Blockchain Development"],
-    working: ["Serverless Architecture", "Edge Computing Solutions"],
-    contributing: {
-        project: "Kubernetes",
-        role: "Community Contributor"
-    }
-};
-```
+
 
 ## 📈 Weekly Development Breakdown
 <!--START_SECTION:waka-->
