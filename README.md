@@ -101,12 +101,12 @@ I'm a passionate Software Engineer with 5+ years of experience in building scala
 </a>
 </div>
 
-### 🚀 [Cloud-Native Microservices Platform](project-link)
+### 🚀 [Carbon_Footprint_Calculator](https://github.com/SuperiorKe/Carbon_Footprint_Calculator)
 Revolutionary microservices architecture leveraging Kubernetes and AWS EKS
 - **Tech Stack:** Go, gRPC, PostgreSQL, Redis, Kubernetes, AWS
 - **Impact:** 300% improvement in system scalability
 - **Features:** Service mesh, automated CI/CD, real-time monitoring
-- ![Stars](https://img.shields.io/github/stars/your-username/project-1?style=social)
+- ![Stars](https://img.shields.io/github/stars/superior/project-1?style=social)
 
 ### 🤖 [AI-Powered Analytics Dashboard](project-link)
 Real-time analytics platform with machine learning capabilities
