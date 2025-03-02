@@ -90,16 +90,6 @@ I'm a passionate Software Engineer with 5+ years of experience in building scala
 ![Kubernetes CKAD](https://img.shields.io/badge/CKAD-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
 ![Terraform Associate](https://img.shields.io/badge/Terraform_Associate-7B42BC?style=for-the-badge&logo=terraform&logoColor=white) -->
 
-## 🎯 Featured Projects
-
-<div align="center">
-<a href="(https://github.com/SuperiorKe/Carbon_Footprint_Calculator)">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=superior&repo=https://github.com/SuperiorKe/Carbon_Footprint_Calculator&theme=tokyonight" />
-</a>
-<a href="project-link-2">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=your-username&repo=project-2&theme=tokyonight" />
-</a>
-</div>
 
 ### 🚀 [Carbon_Footprint_Calculator](https://github.com/SuperiorKe/Carbon_Footprint_Calculator)
 Revolutionary microservices architecture leveraging Kubernetes and AWS EKS
@@ -108,7 +98,7 @@ Revolutionary microservices architecture leveraging Kubernetes and AWS EKS
 - **Features:** Service mesh, automated CI/CD, real-time monitoring
 - ![Stars](https://img.shields.io/github/stars/superior/project-1?style=social)
 
-### 🤖 [AI-Powered Analytics Dashboard](project-link)
+### 🤖 [AI-Powered Analytics Dashboard](https://github.com/SuperiorKe/django_chatbot)
 Real-time analytics platform with machine learning capabilities
 - **Tech Stack:** Python, TensorFlow, React, FastAPI, Docker
 - **Impact:** Processed 1M+ daily events
