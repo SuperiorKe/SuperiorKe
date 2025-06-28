@@ -1,4 +1,5 @@
-# Kenn Macharia — Backend Engineer & Cloud Architect 🚀  
+  # Kenn Macharia
+# Backend Engineer & Cloud Architect 🚀  
 **Express.js • TypeScript • PostgreSQL • REST APIs • Docker • Fintech**
 
 Hello, I am Kenn, A self-taught backend engineer passionate about building **scalable, secure, and high-impact systems**. I specialise in turning complex product needs into clean, reliable backend services. Whether it's building RESTful APIs, architecting databases, or integrating with financial systems, I thrive in the backend trenches.
