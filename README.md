@@ -1,93 +1,140 @@
-  # Kenn Macharia
-# Backend Engineer & Cloud Architect 🚀  
-**Express.js • TypeScript • PostgreSQL • REST APIs • Docker • Fintech**
+<div align="center">
 
-Hello, I am Kenn, A self-taught backend engineer passionate about building **scalable, secure, and high-impact systems**. I specialise in turning complex product needs into clean, reliable backend services. Whether it's building RESTful APIs, architecting databases, or integrating with financial systems, I thrive in the backend trenches.
+# Kenn Macharia
 
-I am currently focused on building tools that **help real-world users automate, save time, and grow** — especially in emerging markets like Nairobi.
+### Building AI Tools That Actually Matter
+
+</div>
+
+<br>
+
+I'm Kenn — founder of **SuperiaTech**, where I build AI-powered tools that help skilled artisans, fundis, and small business owners in Nairobi automate their work, save time, and compete professionally.
+
+**My mission**: Turn real-world problems into useful solutions that move people forward.
+
+<br>
+
+## What I Bring
+
+<table>
+<tr>
+<td width="50%">
+
+**Problem Solver First**  
+I see inefficiencies everywhere and can't help but think "there's gotta be a better way." Every line of code I write is focused on **impact over complexity**.
+
+</td>
+<td width="50%">
+
+**Execution Over Everything**  
+Ideas are cheap. I ship fast, learn faster, and iterate based on real user feedback. My GitHub reflects this — lean MVPs that solve actual problems.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**Local Impact, Global Standards**  
+I build for my community in Nairobi, but with the polish and scalability that could work anywhere. Real users, real problems, world-class solutions.
+
+</td>
+<td width="50%">
+
+**Bridge Builder**  
+I translate between worlds — from AI research papers to SMS-based interfaces that work on basic phones. Complex tech made accessible.
+
+</td>
+</tr>
+</table>
+
+<br>
+
+## Stack
+
+```
+TypeScript • Node.js • Express.js • PostgreSQL • Python • FastAPI 
+Docker • AWS • AI/ML APIs • SMS/WhatsApp APIs
+```
+
+<br>
+
+## Featured Work
+
+### 🔧 [Artisan Task Manager](https://github.com/SuperiorKe/artisan-task-manager)
+*The foundation for everything I'm building*
+
+Web-based task management for skilled artisans and small business owners. Simple signup, intuitive task tracking, professional client communication.
+
+**Why it matters**: Local fundis are incredibly skilled but often struggle with task organization and professional presentation. This levels the playing field.
+
+`Node.js` `Express.js` `PostgreSQL` `Authentication` `RESTful APIs`
+
+<br>
+
+### 🤖 [SMS-AI Chatbot Platform](https://github.com/SuperiorKe/sms-ai-chatbot)
+*AI that meets people where they are*
+
+Conversational AI backend with SMS triggers, built for field workers who need instant access to information without smartphones.
+
+**Why it matters**: Not everyone has a smartphone or reliable internet. This democratizes access to AI assistance through basic SMS.
+
+`Flask` `SQLite` `Gemini AI` `Africa's Talking API` `Webhooks`
+
+<br>
+
+### 💰 [Budgeter App API](https://github.com/SuperiorKe/budgeter)
+*Financial literacy through software*
+
+Backend-only budgeting app with full CRUD support, designed to help users track expenses and build financial habits.
+
+**Why it matters**: Financial literacy is crucial for small business success. Simple tools can create life-changing habits.
+
+`Django REST Framework` `PostgreSQL` `API Documentation` `Test Coverage`
+
+<br>
+
+### 🌿 [Carbon Footprint Calculator](https://github.com/SuperiorKe/carbon-footprint-calculator)
+*Environmental impact through data*
+
+Scalable backend microservices for environmental impact tracking, with CI/CD pipelines and production monitoring.
+
+**Why it matters**: Environmental consciousness starts with awareness. Making impact data accessible and actionable.
+
+`Go` `gRPC` `PostgreSQL` `Redis` `Kubernetes` `GitHub Actions`
+
+<br>
 
 ---
 
-## 🔧 Tech Stack
+<div align="center">
 
-**Languages & Frameworks:**  
-`TypeScript`, `JavaScript`, `Node.js`, `Express.js`, `Python`, `Go`, `FastAPI`, `Django REST`
+**Always Learning, Always Building**
 
-**Databases:**  
-`PostgreSQL`, `SQLite`, `Redis`, `Firebase`, `MongoDB`
+AI Integration • User Experience • System Design • Local Context
 
-**DevOps & Infrastructure:**  
-`Docker`, `Kubernetes (EKS)`, `GitHub Actions`, `AWS`, `Azure`
+<br>
 
-**Tools & Integrations:**  
-`Webhook-based APIs`, `Payments APIs`, `Africa’s Talking`, `Gemini AI`, `CI/CD pipelines`
+<img src="https://github-readme-stats.vercel.app/api?username=SuperiorKe&show_icons=true&theme=minimal&hide_border=true" alt="GitHub Stats" />
 
----
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SuperiorKe&layout=compact&theme=minimal&hide_border=true" alt="Top Languages" />
 
-## 🚀 Featured Projects
-
-### 🌿 Carbon Footprint Calculator  
-> *Go, gRPC, PostgreSQL, Redis, Kubernetes (EKS), GitHub Actions*
-
-- A scalable backend microservices built for environmental impact data.  
-- CI/CD pipelines and monitoring for production stability. 
-- We achieved a 40% reduction in API response latency by utilising async task queues.
-
-🔗 [View Repo](https://github.com/SuperiorKe/carbon-footprint-calculator)
+<br>
 
 ---
 
-### 🤖 SMS‑AI Chatbot Platform  
-> *Flask, SQLite, Gemini AI, Africa’s Talking API, Webhooks*
+**Let's Build Something Together**
 
-- I built a conversational AI backend with SMS triggers for field workers.  
-- Real-time webhook handling and user session management.  
-- This demonstrates full API flow: request → response → state update.
+I'm always open to collaborating on projects that solve real problems for underserved communities, democratize technology access, and create economic opportunities for skilled workers.
 
-🔗 [View Repo](https://github.com/SuperiorKe/sms-ai-chatbot)
+<br>
 
----
+**Get in touch**  
+[Email](mailto:superiorwech@gmail.com) • [LinkedIn](https://linkedin.com/in/kenn-macharia/) • [Portfolio](https://superiatech.netlify.app)
 
-### 💰 Budgeter App API  
-> *Django REST Framework, SQLite → PostgreSQL-ready*
+<br>
 
-- A backend-only app with full CRUD support for user budgets.  
-- Designed with test coverage, serialisation, and API docs. 
-- Clean architecture with separation of concerns.
+*"The best technology is the one that disappears into the background and just helps people get their work done better."*
 
-🔗 [View Repo](https://github.com/SuperiorKe/budgeter)
+**Let's build tools that matter.**
 
----
-
-## 🧠 Learning & Building
-
-I am constantly improving my backend and system design skills through hands-on work and deep dives into:
-- API security best practices  
-- Scalable async processing  
-- Payment and fintech integrations  
-- Cloud-native deployments
-
----
-
-## 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SuperiorKe&show_icons=true&theme=default" alt="GitHub Stats" />
-  <br />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SuperiorKe&layout=compact&theme=default" alt="Top Languages" />
-</p>
-
----
-
-## 📫 Let’s Connect
-
-- 💬 I love collaborating on fintech APIs, automation, and backend systems  
-- 📨 Email: superiorwech@gmail.com  
-- 🌐 [LinkedIn](https://linkedin.com/in/kenn-macharia/)  
-- 🛠️ Portfolio: [https://superiatech.netlify.app]
-
----
-
-> *“Code is a tool. What matters is what we build with it — and who we build it for.”*  
-Let’s create something that moves people forward.
-
+</div>
