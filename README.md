@@ -49,7 +49,7 @@ I translate between worlds — from AI research papers to SMS-based interfaces t
 
 <br>
 
-## Stack
+## Tech Stack
 
 ```
 TypeScript • Node.js • Express.js • PostgreSQL • Python • FastAPI 
