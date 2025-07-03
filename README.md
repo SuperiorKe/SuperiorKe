@@ -8,26 +8,26 @@
 
 <br>
 
-I'm Kenn — founder of **SuperiaTech**, where I build AI-powered tools that help skilled artisans, fundis, and small business owners in Nairobi automate their work, save time, and compete professionally.
+I am Kenn. Founder of **SuperiaTech**, where We build AI-powered tools that help skilled artisans, fundis, and small business owners in Nairobi automate their work, save time, and compete professionally.
 
 **My mission**: Turn real-world problems into useful solutions that move people forward.
 
 <br>
 
-## What I Bring
+## Why Kenn?
 
 <table>
 <tr>
 <td width="50%">
 
-**Problem Solver First**  
-I see inefficiencies everywhere and can't help but think "there's gotta be a better way." Every line of code I write is focused on **impact over complexity**.
+**I am a Problem Solver**  
+I see inefficiencies everywhere and can't help but think, "there's gotta be a better way." Every line of code I write is focused on **impact over complexity**.
 
 </td>
 <td width="50%">
 
 **Execution Over Everything**  
-Ideas are cheap. I ship fast, learn faster, and iterate based on real user feedback. My GitHub reflects this — lean MVPs that solve actual problems.
+Ideas are cheap. I ship fast, learn, and iterate based on real user feedback. My GitHub reflects this — lean MVPs that solve actual problems.
 
 </td>
 </tr>
@@ -63,9 +63,9 @@ Docker • AWS • AI/ML APIs • SMS/WhatsApp APIs
 ### 🔧 [Artisan Task Manager](https://github.com/SuperiorKe/artisan-task-manager)
 *The foundation for everything I'm building*
 
-Web-based task management for skilled artisans and small business owners. Simple signup, intuitive task tracking, professional client communication.
+This is a web-based task management app for skilled artisans and small business owners. Simple signup, intuitive task tracking, professional client communication.
 
-**Why it matters**: Local fundis are incredibly skilled but often struggle with task organization and professional presentation. This levels the playing field.
+**Why it matters**: Local fundis are incredibly skilled but often struggle with admin tasks - organisation and professional presentation. This levels the playing field.
 
 `Node.js` `Express.js` `PostgreSQL` `Authentication` `RESTful APIs`
 
@@ -74,7 +74,7 @@ Web-based task management for skilled artisans and small business owners. Simple
 ### 🤖 [SMS-AI Chatbot Platform](https://github.com/SuperiorKe/sms-ai-chatbot)
 *AI that meets people where they are*
 
-Conversational AI backend with SMS triggers, built for field workers who need instant access to information without smartphones.
+Meet a conversational AI backend with SMS triggers, built for field workers who need instant access to information without smartphones.
 
 **Why it matters**: Not everyone has a smartphone or reliable internet. This democratizes access to AI assistance through basic SMS.
 
@@ -108,7 +108,7 @@ Scalable backend microservices for environmental impact tracking, with CI/CD pip
 
 <div align="center">
 
-**Always Learning, Always Building**
+**I Am Always Learning, Always Building**
 
 AI Integration • User Experience • System Design • Local Context
 
@@ -124,7 +124,7 @@ AI Integration • User Experience • System Design • Local Context
 
 **Let's Build Something Together**
 
-I'm always open to collaborating on projects that solve real problems for underserved communities, democratize technology access, and create economic opportunities for skilled workers.
+I am always open to collaborating on projects that solve real problems for underserved communities, democratize technology access, and create economic opportunities for skilled workers.
 
 <br>
 
