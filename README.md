@@ -1,105 +1,140 @@
 <div align="center">
 
-# 🛠️ Kenn Macharia  
-**Founder @ SuperiaTech** | Backend Engineer | AI Builder  
-Building AI-powered tools that solve *real-world problems* for people who need them most.
+# Kenn Macharia
+
+### Building AI Tools That Actually Matter
 
 </div>
 
+<br>
+
+I am Kenn. Founder of **SuperiaTech**, where We build AI-powered tools that help skilled artisans, fundis, and small business owners in Nairobi automate their work, save time, and compete professionally.
+
+**My mission**: Turn real-world problems into useful solutions that move people forward.
+
+<br>
+
+## Why Kenn?
+
+<table>
+<tr>
+<td width="50%">
+
+**I am a Problem Solver**  
+I see inefficiencies everywhere and can't help but think, "there's gotta be a better way." Every line of code I write is focused on **impact over complexity**.
+
+</td>
+<td width="50%">
+
+**Execution Over Everything**  
+Ideas are cheap. I ship fast, learn, and iterate based on real user feedback. My GitHub reflects this — lean MVPs that solve actual problems.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**Local Impact, Global Standards**  
+I build for my community in Nairobi, but with the polish and scalability that could work anywhere. Real users, real problems, world-class solutions.
+
+</td>
+<td width="50%">
+
+**Bridge Builder**  
+I translate between worlds — from AI research papers to SMS-based interfaces that work on basic phones. Complex tech made accessible.
+
+</td>
+</tr>
+</table>
+
+<br>
+
+## Tech Stack
+
+```
+TypeScript • Node.js • Express.js • PostgreSQL • Python • FastAPI 
+Docker • AWS • AI/ML APIs • SMS/WhatsApp APIs
+```
+
+<br>
+
+## Featured Work
+
+### 🔧 [Artisan Task Manager](https://github.com/SuperiorKe/artisan-task-manager)
+*The foundation for everything I'm building*
+
+This is a web-based task management app for skilled artisans and small business owners. Simple signup, intuitive task tracking, professional client communication.
+
+**Why it matters**: Local fundis are incredibly skilled but often struggle with admin tasks - organisation and professional presentation. This levels the playing field.
+
+`Node.js` `Express.js` `PostgreSQL` `Authentication` `RESTful APIs`
+
+<br>
+
+### 🤖 [SMS-AI Chatbot Platform](https://github.com/SuperiorKe/sms-ai-chatbot)
+*AI that meets people where they are*
+
+Meet a conversational AI backend with SMS triggers, built for field workers who need instant access to information without smartphones.
+
+**Why it matters**: Not everyone has a smartphone or reliable internet. This democratizes access to AI assistance through basic SMS.
+
+`Flask` `SQLite` `Gemini AI` `Africa's Talking API` `Webhooks`
+
+<br>
+
+### 💰 [Budgeter App API](https://github.com/SuperiorKe/budgeter)
+*Financial literacy through software*
+
+Backend-only budgeting app with full CRUD support, designed to help users track expenses and build financial habits.
+
+**Why it matters**: Financial literacy is crucial for small business success. Simple tools can create life-changing habits.
+
+`Django REST Framework` `PostgreSQL` `API Documentation` `Test Coverage`
+
+<br>
+
+### 🌿 [Carbon Footprint Calculator](https://github.com/SuperiorKe/carbon-footprint-calculator)
+*Environmental impact through data*
+
+Scalable backend microservices for environmental impact tracking, with CI/CD pipelines and production monitoring.
+
+**Why it matters**: Environmental consciousness starts with awareness. Making impact data accessible and actionable.
+
+`Go` `gRPC` `PostgreSQL` `Redis` `Kubernetes` `GitHub Actions`
+
+<br>
+
 ---
-
-## 👋🏽 Hello  I am Kenn
-
-Founder of **SuperiaTech**, where we build practical AI tools for **artisans, fundis, and small business owners** in Nairobi.
-
-I specialise in server-side systems that bridge modern AI with local realities. From **SMS-based chatbots** to **task trackers that run on 2G networks**.
-
-> “Does this save time? Reduce friction? Help someone earn more?”  
-> That’s my build filter.
-
----
-
-## 🧠 Core Principles
-
-| 💡 Impact Over Hype | ⚡ Build Fast, Learn Faster |
-|---------------------|----------------------------|
-| 🌍 Local Problems, Global Standards | 🤝 Accessibility Is Power |
-
----
-
-## 🧰 Tech Stack
-
-```ts
-TypeScript • Node.js • Express.js • PostgreSQL • Python • Django • FastAPI  
-Docker • Redis • AWS • Firebase • gRPC • OpenAI/Gemini APIs  
-Africa's Talking (SMS/USSD) • GitHub Actions • CI/CD
-
-🚀 Featured Projects
-🔧 Artisan Task Manager
-A digital assistant for Nairobi’s most hands-on entrepreneurs.
-
-Track jobs, impress clients, stay organized — without the friction of complex software.
-
-Node.js Express.js PostgreSQL JWT Auth
-
-SMS notifications, clean API, mobile-first UX
-
-🤖 SMS AI Chatbot
-ChatGPT, over SMS — no smartphone required.
-
-For workers with no data plans but a need for answers. Accessible AI through basic phones.
-
-Flask SQLite Gemini AI Africa’s Talking API
-
-Webhooks + fallback logic for latency/error handling
-
-💰 Budgeter API
-Simple budgeting API to build healthy financial habits.
-
-Financial literacy tools tailored for side hustles and small business owners.
-
-Django REST Framework PostgreSQL
-
-Fully documented, tested, and designed for integration
-
-🌿 Carbon Footprint Microservices
-Environmental impact data, made actionable.
-
-Microservices backend to calculate and visualize carbon usage — fast, scalable, monitored.
-
-Go gRPC Redis PostgreSQL
-
-Docker Kubernetes GitHub Actions for CI/CD
-
-📊 GitHub Stats
-<div align="center"> <img src="https://github-readme-stats.vercel.app/api?username=SuperiorKe&show_icons=true&theme=default&hide_border=true" alt="GitHub Stats" /> <br /> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SuperiorKe&layout=compact&theme=default&hide_border=true" alt="Top Languages" /> </div>
-🌍 Vision
-I want to build tools that disappear into the background —
-quietly empowering people to do more, earn more, and grow.
-
-💻 AI that works on basic phones
-
-🔐 Systems that respect privacy and bandwidth
-
-🧱 Backends that scale without breaking the bank
-
-🤲🏽 Local-first, global-ready products
-
-🤝 Let’s Collaborate
-I’m open to:
-
-Joint projects that serve underserved communities
-
-Building AI tools with real-world application
-
-Contributing to social impact tech initiatives
-
-📬 Reach out:
-Email • LinkedIn • Portfolio
 
 <div align="center">
-"The best technology is the one that disappears into the background and just helps people get their work done better."
 
-Let’s build tools that actually matter.
+**I Am Always Learning, Always Building**
 
-</div> ```
+AI Integration • User Experience • System Design • Local Context
+
+<br>
+
+<img src="https://github-readme-stats.vercel.app/api?username=SuperiorKe&show_icons=true&theme=minimal&hide_border=true" alt="GitHub Stats" />
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SuperiorKe&layout=compact&theme=minimal&hide_border=true" alt="Top Languages" />
+
+<br>
+
+---
+
+**Let's Build Something Together**
+
+I am always open to collaborating on projects that solve real problems for underserved communities, democratize technology access, and create economic opportunities for skilled workers.
+
+<br>
+
+**Get in touch**  
+[Email](mailto:superiorwech@gmail.com) • [LinkedIn](https://linkedin.com/in/kenn-macharia/) • [Portfolio](https://superiatech.netlify.app)
+
+<br>
+
+*"The best technology is the one that disappears into the background and just helps people get their work done better."*
+
+**Let's build tools that matter.**
+
+</div>
