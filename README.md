@@ -21,13 +21,13 @@ I am Kenn. Founder of **SuperiaTech**, where We build AI-powered tools that help
 <td width="50%">
 
 **I am a Problem Solver**  
-I see inefficiencies everywhere and can't help but think, "there's gotta be a better way." Every line of code I write is focused on **impact over complexity**.
+I see inefficiencies everywhere and can't help but think, "There's gotta be a better way." Every line of code I write is focused on **impact over complexity**.
 
 </td>
 <td width="50%">
 
 **Execution Over Everything**  
-Ideas are cheap. I ship fast, learn, and iterate based on real user feedback. My GitHub reflects this — lean MVPs that solve actual problems.
+Ideas are cheap. I ship fast, learn, and iterate based on real user feedback. My GitHub reflects this: lean MVPs that solve actual problems.
 
 </td>
 </tr>
@@ -35,13 +35,13 @@ Ideas are cheap. I ship fast, learn, and iterate based on real user feedback. My
 <td width="50%">
 
 **Local Impact, Global Standards**  
-I build for my community in Nairobi, but with the polish and scalability that could work anywhere. Real users, real problems, world-class solutions.
+I build for my community in Nairobi, but with the polish and scalability that could work anywhere: real users, real problems, world-class solutions.
 
 </td>
 <td width="50%">
 
 **Bridge Builder**  
-I translate between worlds — from AI research papers to SMS-based interfaces that work on basic phones. Complex tech made accessible.
+I translate between worlds, from AI research papers to SMS-based interfaces that work on basic phones. Complex tech made accessible.
 
 </td>
 </tr>
@@ -60,10 +60,10 @@ Docker • AWS • AI/ML APIs • SMS/WhatsApp APIs
 
 ## Featured Work
 
-### 🔧 [Artisan Task Manager](https://github.com/SuperiorKe/artisan-task-manager)
+### 🔧 [Artisan Task Manager](https://artisan-task-manager.web.app/)
 *The foundation for everything I'm building*
 
-This is a web-based task management app for skilled artisans and small business owners. Simple signup, intuitive task tracking, professional client communication.
+This is a web-based task management app for skilled artisans and small business owners: simple signup, intuitive task tracking, and professional client communication.
 
 **Why it matters**: Local fundis are incredibly skilled but often struggle with admin tasks - organisation and professional presentation. This levels the playing field.
 
@@ -71,7 +71,7 @@ This is a web-based task management app for skilled artisans and small business 
 
 <br>
 
-### 🤖 [SMS-AI Chatbot Platform](https://github.com/SuperiorKe/sms-ai-chatbot)
+### 🤖 [SMS-AI Chatbot Platform](https://github.com/SuperiorKe/2g-Meets-AI)
 *AI that meets people where they are*
 
 Meet a conversational AI backend with SMS triggers, built for field workers who need instant access to information without smartphones.
@@ -82,7 +82,7 @@ Meet a conversational AI backend with SMS triggers, built for field workers who 
 
 <br>
 
-### 💰 [Budgeter App API](https://github.com/SuperiorKe/budgeter)
+### 💰 [Budgeter App API](https://superiorke.github.io/Graphic-Designer-porfolio/)
 *Financial literacy through software*
 
 Backend-only budgeting app with full CRUD support, designed to help users track expenses and build financial habits.
@@ -93,7 +93,7 @@ Backend-only budgeting app with full CRUD support, designed to help users track 
 
 <br>
 
-### 🌿 [Carbon Footprint Calculator](https://github.com/SuperiorKe/carbon-footprint-calculator)
+### 🌿 [Carbon Footprint Calculator](https://superiorke.github.io/Carbon_Footprint_Calculator/)
 *Environmental impact through data*
 
 Scalable backend microservices for environmental impact tracking, with CI/CD pipelines and production monitoring.
