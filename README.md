@@ -1,140 +1,133 @@
-<div align="center">
-
 # Kenn Macharia
 
-### Building AI Tools That Actually Matter
+**Full-Stack Developer | Building Production Apps with React, Node.js & AWS**
 
-</div>
+I build web applications that solve real business problems. Currently shipping automation tools for artisans and small businesses in Nairobi while pursuing software engineering roles at startups.
 
-<br>
+**Tech Stack:** TypeScript • React • Node.js • Express • PostgreSQL • Python • FastAPI • Docker • AWS
 
-I am Kenn. Founder of **SuperiaTech**, where We build AI-powered tools that help skilled artisans, fundis, and small business owners in Nairobi automate their work, save time, and compete professionally.
+**Looking for:** Junior/Associate Software Engineer roles where I can contribute to product development and learn from experienced teams.
 
-**My mission**: Turn real-world problems into useful solutions that move people forward.
-
-<br>
-
-## Why Kenn?
-
-<table>
-<tr>
-<td width="50%">
-
-**I am a Problem Solver**  
-I see inefficiencies everywhere and can't help but think, "There's gotta be a better way." Every line of code I write is focused on **impact over complexity**.
-
-</td>
-<td width="50%">
-
-**Execution Over Everything**  
-Ideas are cheap. I ship fast, learn, and iterate based on real user feedback. My GitHub reflects this: lean MVPs that solve actual problems.
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-**Local Impact, Global Standards**  
-I build for my community in Nairobi, but with the polish and scalability that could work anywhere: real users, real problems, world-class solutions.
-
-</td>
-<td width="50%">
-
-**Bridge Builder**  
-I translate between worlds, from AI research papers to SMS-based interfaces that work on basic phones. Complex tech made accessible.
-
-</td>
-</tr>
-</table>
-
-<br>
-
-## Tech Stack
-
-```
-TypeScript • Node.js • Express.js • PostgreSQL • Python • FastAPI 
-Docker • AWS • AI/ML APIs • SMS/WhatsApp APIs
-```
-
-<br>
-
-## Featured Work
-
-### 🔧 [Artisan Task Manager](https://artisan-task-manager.web.app/)
-*The foundation for everything I'm building*
-
-This is a web-based task management app for skilled artisans and small business owners: simple signup, intuitive task tracking, and professional client communication.
-
-**Why it matters**: Local fundis are incredibly skilled but often struggle with admin tasks - organisation and professional presentation. This levels the playing field.
-
-`Node.js` `Express.js` `PostgreSQL` `Authentication` `RESTful APIs`
-
-<br>
-
-### 🤖 [SMS-AI Chatbot Platform](https://github.com/SuperiorKe/2g-Meets-AI)
-*AI that meets people where they are*
-
-Meet a conversational AI backend with SMS triggers, built for field workers who need instant access to information without smartphones.
-
-**Why it matters**: Not everyone has a smartphone or reliable internet. This democratizes access to AI assistance through basic SMS.
-
-`Flask` `SQLite` `Gemini AI` `Africa's Talking API` `Webhooks`
-
-<br>
-
-### 💰 [Budgeter App API](https://superiorke.github.io/Graphic-Designer-porfolio/)
-*Financial literacy through software*
-
-Backend-only budgeting app with full CRUD support, designed to help users track expenses and build financial habits.
-
-**Why it matters**: Financial literacy is crucial for small business success. Simple tools can create life-changing habits.
-
-`Django REST Framework` `PostgreSQL` `API Documentation` `Test Coverage`
-
-<br>
-
-### 🌿 [Carbon Footprint Calculator](https://superiorke.github.io/Carbon_Footprint_Calculator/)
-*Environmental impact through data*
-
-Scalable backend microservices for environmental impact tracking, with CI/CD pipelines and production monitoring.
-
-**Why it matters**: Environmental consciousness starts with awareness. Making impact data accessible and actionable.
-
-`Go` `gRPC` `PostgreSQL` `Redis` `Kubernetes` `GitHub Actions`
-
-<br>
+📧 [superiorwech@gmail.com](mailto:superiorwech@gmail.com) • 💼 [LinkedIn](https://linkedin.com/in/kenn-macharia/) • 🌐 [Portfolio](https://superiatech.netlify.app)
 
 ---
 
-<div align="center">
+## Featured Projects
 
-**I Am Always Learning, Always Building**
+### 🛒 Afrimall E-Commerce Platform
+**Full-stack e-commerce solution built for US client**
 
-AI Integration • User Experience • System Design • Local Context
+Built complete e-commerce platform from scratch in 30 days. Handles product catalog, secure checkout, and automated customer communications.
 
-<br>
+**Tech:** Next.js • TypeScript • Payload CMS • PostgreSQL • Stripe API • SendGrid  
+**Impact:** Live in production, processing real transactions  
+**Links:** [Live Site](https://afrimall.app) • [GitHub](https://github.com/SuperiorKe/afrimall)
 
-<img src="https://github-readme-stats.vercel.app/api?username=SuperiorKe&show_icons=true&theme=minimal&hide_border=true" alt="GitHub Stats" />
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SuperiorKe&layout=compact&theme=minimal&hide_border=true" alt="Top Languages" />
-
-<br>
+**Key Features:**
+- Secure payment processing with Stripe integration
+- Real-time email notifications via SendGrid
+- Server-side rendering for optimal performance
+- Responsive design across all devices
+- CI/CD pipeline with 99.9% uptime
 
 ---
 
-**Let's Build Something Together**
+### 🛠️ Artisan Task Manager
+**Production task management app for skilled workers and small businesses**
 
-I am always open to collaborating on projects that solve real problems for underserved communities, democratize technology access, and create economic opportunities for skilled workers.
+Web-based tool that helps Nairobi artisans (fundis) organize their work, track tasks, and communicate professionally with clients. Solving the gap between skilled craftsmanship and business operations.
 
-<br>
+**Tech:** Node.js • Express • PostgreSQL • React • REST APIs  
+**Impact:** Simplifies admin work for skilled workers who excel at their craft  
+**Links:** [Try Demo](https://artisan-task-manager.web.app/) • [GitHub](https://github.com/SuperiorKe/artisan-task-manager)
 
-**Get in touch**  
-[Email](mailto:superiorwech@gmail.com) • [LinkedIn](https://linkedin.com/in/kenn-macharia/) • [Portfolio](https://superiatech.netlify.app)
+**Key Features:**
+- Simple signup and authentication
+- Intuitive task tracking and organization
+- Client communication tools
+- Mobile-responsive interface
 
-<br>
+---
+
+### 💬 SMS-AI Assistant
+**Conversational AI accessible via basic SMS**
+
+AI backend with SMS triggers built for field workers who need instant information access without smartphones. Democratizes AI assistance through Africa's Talking SMS API.
+
+**Tech:** Flask • SQLite • Gemini AI • Africa's Talking API • Webhooks  
+**Impact:** Makes AI accessible to users with basic phones and limited internet  
+**Links:** [GitHub](https://github.com/SuperiorKe/sms-ai-assistant)
+
+**Key Features:**
+- SMS-triggered AI conversations
+- Context-aware responses
+- No smartphone required
+- Low-bandwidth optimized
+
+---
+
+### 📊 Budget Tracker API
+**Backend service for expense tracking and financial management**
+
+RESTful API with full CRUD operations designed to help small business owners track expenses and build financial habits.
+
+**Tech:** Django REST Framework • PostgreSQL • API Documentation  
+**Impact:** Simplifies financial management for small businesses  
+**Links:** [GitHub](https://github.com/SuperiorKe/budget-tracker) • [API Docs](https://budget-tracker-api.example.com/docs)
+
+---
+
+### 🌍 Carbon Footprint Calculator
+**Environmental impact tracking with scalable backend architecture**
+
+Data-driven tool for tracking and visualizing carbon emissions. Built with production-grade infrastructure including CI/CD pipelines and monitoring.
+
+**Tech:** Go • gRPC • PostgreSQL • Redis • Kubernetes • GitHub Actions  
+**Impact:** Makes environmental impact data accessible and actionable  
+**Links:** [GitHub](https://github.com/SuperiorKe/carbon-calculator)
+
+---
+
+## What I'm Learning
+
+**Current Focus:**
+- AWS Solutions Architecture (ALX Graduate, Nov 2024)
+- LLM Integrations (Africa's Talking x Google AI Program, Oct 2025)
+- System design patterns for scalable applications
+
+**Recent Certifications:**
+- AWS Certified Cloud Practitioner (Oct 2024)
+- AWS Academy Graduate – Cloud Foundations (Dec 2024)
+
+---
+
+## About SuperiaTech
+
+I founded SuperiaTech to build tools that help skilled artisans and small businesses in Nairobi compete professionally. The mission: automate administrative work so talented people can focus on what they do best.
+
+**Philosophy:** Build solutions that work for real people in real contexts. Global-quality tools adapted for local needs.
+
+---
+
+## Let's Connect
+
+I'm actively seeking junior/associate software engineering roles at startups where I can:
+- Ship features and contribute to product development
+- Learn from experienced engineers and grow my technical skills
+- Work on products that solve real problems for real users
+
+**Open to:** Full-time roles in Nairobi • Remote opportunities • Contract work
+
+📧 Email: [superiorwech@gmail.com](mailto:superiorwech@gmail.com)  
+💼 LinkedIn: [linkedin.com/in/kenn-macharia](https://linkedin.com/in/kenn-macharia/)  
+🌐 Portfolio: [superiatech.netlify.app](https://superiatech.netlify.app)  
+📍 Location: Nairobi, Kenya
+
+---
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=SuperiorKe&show_icons=true&theme=minimal&hide_border=true)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=SuperiorKe&layout=compact&theme=minimal&hide_border=true)
+
+---
 
 *"The best technology is the one that disappears into the background and just helps people get their work done better."*
-
-**Let's build tools that matter.**
-
-</div>
