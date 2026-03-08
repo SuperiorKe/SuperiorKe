@@ -1,133 +1,95 @@
 # Kenn Macharia
 
-**Full-Stack Developer | Building Production Apps with React, Node.js & AWS**
+> I build operational infrastructure for the informal economy — tools that help skilled people in Africa run like professionals.
 
-I build web applications that solve real business problems. Currently shipping automation tools for artisans and small businesses in Nairobi while pursuing software engineering roles at startups.
+Software Engineer & Founder of [SuperiaTech](https://superiatech.netlify.app). I design and ship production systems at the intersection of automation, AI, and local business operations.
 
-**Tech Stack:** TypeScript • React • Node.js • Express • PostgreSQL • Python • FastAPI • Docker • AWS
-
-**Looking for:** Junior/Associate Software Engineer roles where I can contribute to product development and learn from experienced teams.
-
-📧 [superiorwech@gmail.com](mailto:superiorwech@gmail.com) • 💼 [LinkedIn](https://linkedin.com/in/kenn-macharia/) • 🌐 [Portfolio](https://superiatech.netlify.app)
+Based in Nairobi. Building for the people who don't make the headlines but keep everything running.
 
 ---
 
-## Featured Projects
+## Currently Building
 
-### 🛒 Afrimall E-Commerce Platform
-**Full-stack e-commerce solution built for US client**
+**Mama Mboga** — A WhatsApp-based business coaching system for market vendors. Tracks daily sales, manages stock levels, and delivers intelligent coach summaries — no app download, no friction. State-machine architecture over the Meta WhatsApp Business API, with n8n orchestrating the full workflow.
 
-Built complete e-commerce platform from scratch in 30 days. Handles product catalog, secure checkout, and automated customer communications.
+---
 
-**Tech:** Next.js • TypeScript • Payload CMS • PostgreSQL • Stripe API • SendGrid  
+## Selected Work
+
+### Mama Mboga — WhatsApp Business Coach
+*Conversational operations for vendors who don't have time for dashboards*
+
+Automated business coaching delivered over WhatsApp. Vendors log sales and stock via natural conversation; the system handles reminders, flags low stock, and surfaces daily summaries to a coach — all without a single app install.
+
+**Stack:** n8n · Meta WhatsApp Business API · Google Sheets · Node.js  
+**Architecture:** State machine · Webhook handlers · Cron-triggered reminders (EAT timezone)  
+**Impact:** Business intelligence accessible on a basic smartphone
+
+---
+
+### Afrimall — E-Commerce Platform
+*Full-stack commerce built for a US client, shipped in 30 days*
+
+Production e-commerce system handling real transactions end to end. Built from scratch: product catalog, secure checkout, automated customer communications, and a CI/CD pipeline holding 99.9% uptime.
+
+**Stack:** Next.js · TypeScript · Payload CMS · PostgreSQL · Stripe · SendGrid  
 **Impact:** Live in production, processing real transactions  
-**Links:** [Live Site](https://afrimall.app) • [GitHub](https://github.com/SuperiorKe/afrimall)
-
-**Key Features:**
-- Secure payment processing with Stripe integration
-- Real-time email notifications via SendGrid
-- Server-side rendering for optimal performance
-- Responsive design across all devices
-- CI/CD pipeline with 99.9% uptime
+[Live Site](#) · [GitHub](#)
 
 ---
 
-### 🛠️ Artisan Task Manager
-**Production task management app for skilled workers and small businesses**
+### SMS-AI Assistant
+*AI access for users without smartphones*
 
-Web-based tool that helps Nairobi artisans (fundis) organize their work, track tasks, and communicate professionally with clients. Solving the gap between skilled craftsmanship and business operations.
+Conversational AI triggered by basic SMS — no data plan required. Built for field workers across Africa who need instant information access in low-connectivity environments. Integrates Gemini AI through Africa's Talking SMS gateway.
 
-**Tech:** Node.js • Express • PostgreSQL • React • REST APIs  
-**Impact:** Simplifies admin work for skilled workers who excel at their craft  
-**Links:** [Try Demo](https://artisan-task-manager.web.app/) • [GitHub](https://github.com/SuperiorKe/artisan-task-manager)
-
-**Key Features:**
-- Simple signup and authentication
-- Intuitive task tracking and organization
-- Client communication tools
-- Mobile-responsive interface
+**Stack:** Flask · SQLite · Gemini AI · Africa's Talking API  
+**Impact:** AI assistance on a $10 feature phone  
+[GitHub](#)
 
 ---
 
-### 💬 SMS-AI Assistant
-**Conversational AI accessible via basic SMS**
+### Artisan Task Manager
+*Business operations for skilled workers who hate paperwork*
 
-AI backend with SMS triggers built for field workers who need instant information access without smartphones. Democratizes AI assistance through Africa's Talking SMS API.
+Task management and client communication tool built specifically for Nairobi fundis. Bridges the gap between skilled craftsmanship and professional business operations — simple auth, intuitive tracking, mobile-first.
 
-**Tech:** Flask • SQLite • Gemini AI • Africa's Talking API • Webhooks  
-**Impact:** Makes AI accessible to users with basic phones and limited internet  
-**Links:** [GitHub](https://github.com/SuperiorKe/sms-ai-assistant)
-
-**Key Features:**
-- SMS-triggered AI conversations
-- Context-aware responses
-- No smartphone required
-- Low-bandwidth optimized
+**Stack:** Node.js · Express · PostgreSQL · React  
+[Demo](#) · [GitHub](#)
 
 ---
 
-### 📊 Budget Tracker API
-**Backend service for expense tracking and financial management**
+## Stack
 
-RESTful API with full CRUD operations designed to help small business owners track expenses and build financial habits.
-
-**Tech:** Django REST Framework • PostgreSQL • API Documentation  
-**Impact:** Simplifies financial management for small businesses  
-**Links:** [GitHub](https://github.com/SuperiorKe/budget-tracker) • [API Docs](https://budget-tracker-api.example.com/docs)
-
----
-
-### 🌍 Carbon Footprint Calculator
-**Environmental impact tracking with scalable backend architecture**
-
-Data-driven tool for tracking and visualizing carbon emissions. Built with production-grade infrastructure including CI/CD pipelines and monitoring.
-
-**Tech:** Go • gRPC • PostgreSQL • Redis • Kubernetes • GitHub Actions  
-**Impact:** Makes environmental impact data accessible and actionable  
-**Links:** [GitHub](https://github.com/SuperiorKe/carbon-calculator)
+```
+Languages      TypeScript · Python · Go · SQL
+Frontend       React · Next.js
+Backend        Node.js · Express · FastAPI · Django · Flask
+Data           PostgreSQL · Redis · SQLite
+Infrastructure AWS · Docker · Kubernetes · GitHub Actions
+Automation     n8n · Webhooks · REST APIs
+AI             Gemini AI · LLM integrations · Africa's Talking
+```
 
 ---
 
-## What I'm Learning
+## Certifications
 
-**Current Focus:**
-- AWS Solutions Architecture (ALX Graduate, Nov 2024)
-- LLM Integrations (Africa's Talking x Google AI Program, Oct 2025)
-- System design patterns for scalable applications
-
-**Recent Certifications:**
-- AWS Certified Cloud Practitioner (Oct 2024)
-- AWS Academy Graduate – Cloud Foundations (Dec 2024)
-
----
-
-## About SuperiaTech
-
-I founded SuperiaTech to build tools that help skilled artisans and small businesses in Nairobi compete professionally. The mission: automate administrative work so talented people can focus on what they do best.
-
-**Philosophy:** Build solutions that work for real people in real contexts. Global-quality tools adapted for local needs.
+- AWS Certified Cloud Practitioner — Oct 2024
+- AWS Academy Graduate, Cloud Foundations — Dec 2024
+- Africa's Talking × Google AI Program — Oct 2025
 
 ---
 
 ## Let's Connect
 
-I'm actively seeking junior/associate software engineering roles at startups where I can:
-- Ship features and contribute to product development
-- Learn from experienced engineers and grow my technical skills
-- Work on products that solve real problems for real users
+Working on something that needs automation, AI integration, or backend architecture? Or just want to talk about technology and the informal economy?
 
-**Open to:** Full-time roles in Nairobi • Remote opportunities • Contract work
-
-📧 Email: [superiorwech@gmail.com](mailto:superiorwech@gmail.com)  
-💼 LinkedIn: [linkedin.com/in/kenn-macharia](https://linkedin.com/in/kenn-macharia/)  
-🌐 Portfolio: [superiatech.netlify.app](https://superiatech.netlify.app)  
-📍 Location: Nairobi, Kenya
+📧 superiorwech@gmail.com  
+💼 [LinkedIn](https://linkedin.com/in/kenn-macharia)  
+🌐 [SuperiaTech](https://superiatech.netlify.app)  
+📍 Nairobi, Kenya · Open to remote
 
 ---
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=SuperiorKe&show_icons=true&theme=minimal&hide_border=true)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=SuperiorKe&layout=compact&theme=minimal&hide_border=true)
-
----
-
-*"The best technology is the one that disappears into the background and just helps people get their work done better."*
+*"The best technology disappears into the background and helps people get their work done better."*
