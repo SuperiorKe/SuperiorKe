@@ -87,7 +87,7 @@ Working on something that needs automation, AI integration, or backend architect
 
 📧 superiorwech@gmail.com  
 💼 [LinkedIn](https://linkedin.com/in/kenn-macharia)  
-🌐 [SuperiaTech](https://superiatech.netlify.app)  
+🌐 [SuperiaTech](https://superiatech.vercel.app/)  
 📍 Nairobi, Kenya · Open to remote
 
 ---
