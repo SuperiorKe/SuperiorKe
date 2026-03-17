@@ -2,7 +2,7 @@
 
 > I build operational infrastructure for the informal economy — tools that help skilled people in Africa run like professionals.
 
-Software Engineer & Founder of [SuperiaTech](superiatech.vercel.app). I design and ship production systems at the intersection of automation, AI, and local business operations.
+Software Engineer & Founder of [SuperiaTech](https://superiatech.vercel.app/). I design and ship production systems at the intersection of automation, AI, and local business operations.
 
 Based in Nairobi. Building for the people who don't make the headlines but keep everything running.
 
