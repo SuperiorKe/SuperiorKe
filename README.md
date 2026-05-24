@@ -1,17 +1,17 @@
 # Kenn Macharia
 
-> I build operational infrastructure for the informal economy — tools that help the people running African commerce and civic life run like professionals.
+> I direct AI agents to ship real products for real users. Africa's informal economy is the constraint — and the opportunity.
 
-Backend engineer in Nairobi. Founder of [SuperiaTech](https://superiatech.vercel.app/). I work in Python and Node.js on cloud, on systems that have to survive USSD sessions, M-Pesa callbacks, Swahili-English code-switching, and users who will never download an app.
+AI Builder in Nairobi. Founder of [SuperiaTech](https://superiatech.vercel.app/). I make the product decisions, the architecture decisions, the UX decisions — then direct AI agents (Claude Code, Gemini, ADK) to execute. Full-stack products shipped in days: storefronts, civic tools, infrastructure layers, USSD flows.
 
-That constraint is the work.
+The users I build for don't download apps. They run on M-Pesa callbacks, USSD sessions, Swahili-English code-switching, and feature phones. That constraint is what makes the work real.
 
 ---
 
 ## Selected work
 
 ### Sauti ya Mwananchi — civic-accountability AI agent
-*Cite-or-refuse Gemini middleware on Cloud Run*
+*Cite-or-refuse Gemini middleware on Cloud Run · Built in 6 hours at GDG Nairobi Agentathon*
 
 Answers Kenyan voters' civic questions in English, Swahili, or Sheng — grounded in the Constitution of Kenya 2010 and the IEBC Voter Guide. A custom Python middleware intercepts every model response and rejects anything without a primary-source citation. The model never reaches the user unchecked.
 
@@ -20,13 +20,13 @@ Answers Kenyan voters' civic questions in English, Swahili, or Sheng — grounde
 
 ---
 
-### Afrimall — production e-commerce platform
-*Full-stack commerce shipped end-to-end for a US client*
+### Eliana Textiles — Nairobi SMB storefront
+*Luxury bedding storefront with serverless backend and full test coverage · Built in 2 days with AI Studio + Claude Code*
 
-Next.js 15 + Payload CMS storefront, admin, and API in one app. PostgreSQL, Stripe checkout with webhook reconciliation, transactional email, deployed on Vercel. Real customers, real transactions.
+Storefront for a Nairobi-based bedding brand at OTC Wholesale Mall. React 19 + Vite + Vercel serverless functions, with Playwright E2E and Vitest unit tests covering the catalog and checkout flows.
 
-**Stack:** Next.js 15 · TypeScript · Payload CMS · PostgreSQL · Stripe · Vercel
-[Live](https://afrimall.app) · [GitHub](https://github.com/SuperiorKe/afrimall)
+**Stack:** React 19 · TypeScript · Vite · Tailwind 4 · Vercel serverless · Playwright · Vitest
+[Live](https://eliana-textiles.vercel.app) · [GitHub](https://github.com/SuperiorKe/eliana-textiles)
 
 ---
 
@@ -37,6 +37,16 @@ An infrastructure layer between AI agents and the systems they act on. Agents su
 
 **Stack:** Node.js · Express · Knex · SQLite · Socket.io · React · Vite
 [GitHub](https://github.com/SuperiorKe/AgentGovernance)
+
+---
+
+### Afrimall — production e-commerce platform
+*Full-stack commerce shipped end-to-end for a US client*
+
+Next.js 15 + Payload CMS storefront, admin, and API in one app. PostgreSQL, Stripe checkout with webhook reconciliation, transactional email, deployed on Vercel. Real customers, real transactions.
+
+**Stack:** Next.js 15 · TypeScript · Payload CMS · PostgreSQL · Stripe · Vercel
+[Live](https://afrimall.app) · [GitHub](https://github.com/SuperiorKe/afrimall)
 
 ---
 
@@ -60,16 +70,6 @@ USSD-based rent payment for Kenyan landlords. Tenants pay rent over a basic phon
 
 ---
 
-### Eliana Textiles — Nairobi SMB storefront
-*Luxury bedding storefront with serverless backend and full test coverage*
-
-Storefront for a Nairobi-based bedding brand at OTC Wholesale Mall. React 19 + Vite + Vercel serverless functions, with Playwright E2E and Vitest unit tests covering the catalog and checkout flows.
-
-**Stack:** React 19 · TypeScript · Vite · Tailwind 4 · Vercel serverless · Playwright · Vitest
-[Live](https://eliana-textiles.vercel.app) · [GitHub](https://github.com/SuperiorKe/eliana-textiles)
-
----
-
 ## Stack
 
 ```
@@ -80,7 +80,7 @@ Data            PostgreSQL · SQLite · Drizzle · Knex
 Cloud           AWS · Google Cloud (Cloud Run, Vertex AI) · Vercel
 Infrastructure  Docker · GitHub Actions
 Telco / Mobile  Africa's Talking (SMS/USSD/Airtime) · M-Pesa Daraja
-AI              Gemini · LangChain · Google ADK
+AI / Agents     Claude Code · Anthropic SDK · Google ADK · Gemini · LangChain
 ```
 
 ---
@@ -96,7 +96,7 @@ AI              Gemini · LangChain · Google ADK
 
 ## What I'm looking for
 
-A backend engineering role — Node.js, Python, or cloud-leaning — on a team that ships to real users in environments where reliability matters more than novelty. I work best alongside engineers who care about the system surviving Monday morning, not just Friday's demo.
+AI Engineer, founding engineer, or Developer Relations roles at early-stage startups where shipping fast matters. I land opportunities through building in public — not cold applications. If you're building for Africa or other high-constraint environments, or need someone who can direct AI agents to ship real product fast, let's talk.
 
 ---
 

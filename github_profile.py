@@ -37,7 +37,7 @@ except ImportError:
     REQUESTS_ENABLED = False
 
 
-class SoftwareEngineer:
+class AIBuilder:
     """
     Interactive profile class that showcases skills and generates project recommendations
     based on visitor's interests. Can be run locally after cloning.
@@ -45,80 +45,100 @@ class SoftwareEngineer:
     def __init__(self):
         """Initialize with personal and professional information."""
         self.name = "Kenn Macharia"
-        self.role = "Back-End Developer"
+        self.role = "AI Builder"
         self.location = "Nairobi, Kenya"
-        self.mission = "Creating robust software architecture that scales"
+        self.mission = "Directing AI agents to ship real products for Africa's informal economy"
         self.github_username = "SuperiorKe"
         self.languages = {
             "Python": {
-                "level": "Expert", 
-                "years": 5, 
-                "frameworks": ["FastAPI", "Django", "Flask"],
-                "strengths": ["API Development", "Data Processing", "Automation"]
-            },
-            "JavaScript": {
-                "level": "Advanced", 
-                "years": 4, 
-                "frameworks": ["Node.js", "Express"],
-                "strengths": ["Server-side Applications", "RESTful APIs"]
+                "level": "Expert",
+                "years": 5,
+                "frameworks": ["FastAPI", "Flask", "Google ADK"],
+                "strengths": ["AI Agent Pipelines", "API Development", "Automation"]
             },
             "TypeScript": {
-                "level": "Advanced", 
-                "years": 3, 
-                "frameworks": ["NestJS"],
-                "strengths": ["Type-safe Backend Development", "Enterprise Applications"]
+                "level": "Advanced",
+                "years": 3,
+                "frameworks": ["Next.js", "React", "Express"],
+                "strengths": ["Full-stack product shipping", "Serverless", "E2E testing"]
             },
-            "Go": {
-                "level": "Intermediate", 
-                "years": 2, 
-                "frameworks": ["Gin"],
-                "strengths": ["High-performance Services", "Concurrent Applications"]
+            "JavaScript": {
+                "level": "Advanced",
+                "years": 4,
+                "frameworks": ["Node.js", "Express", "Payload CMS"],
+                "strengths": ["Server-side Applications", "RESTful APIs"]
             }
         }
         self.cloud_skills = [
             {"name": "AWS", "level": "Certified", "services": ["Lambda", "ECS", "S3", "DynamoDB"]},
-            {"name": "Kubernetes", "level": "Advanced", "focus": "Production Deployments"},
-            {"name": "Terraform", "level": "Intermediate", "focus": "Infrastructure as Code"},
-            {"name": "CI/CD", "level": "Advanced", "tools": ["GitHub Actions", "GitLab CI", "Jenkins"]}
+            {"name": "Google Cloud", "level": "Advanced", "services": ["Cloud Run", "Vertex AI", "ADK"]},
+            {"name": "Vercel", "level": "Advanced", "focus": "Serverless product deployments"},
+            {"name": "CI/CD", "level": "Advanced", "tools": ["GitHub Actions"]}
         ]
-        self.interests = ["Cloud Architecture", "DevOps", "AI/ML", "Open Source"]
+        self.interests = ["AI Agents", "Informal Economy", "Africa Tech", "Building in Public"]
         self.github = f"https://github.com/{self.github_username}"
         self.availability = self._check_availability()
         
         # Projects information with tech stacks and descriptions
         self.projects = [
             {
-                "name": "Carbon Footprint Calculator",
-                "url": f"{self.github}/Carbon_Footprint_Calculator",
-                "tech_stack": ["Go", "Kubernetes", "AWS", "PostgreSQL"],
-                "category": "Sustainability",
-                "description": "Microservices platform for measuring carbon emissions",
+                "name": "Sauti ya Mwananchi",
+                "url": f"{self.github}/sauti-ya-mwananchi",
+                "live": "https://sauti-ya-mwananchi-mu44pr45ha-uc.a.run.app",
+                "tech_stack": ["Python", "FastAPI", "Google ADK", "Gemini 2.0", "Cloud Run"],
+                "category": "Civic AI",
+                "description": "Cite-or-refuse civic accountability AI agent for Kenyan voters",
                 "key_features": [
-                    "Service mesh architecture",
-                    "Real-time data processing",
-                    "Scalable analytics dashboard"
+                    "Answers in English, Swahili, or Sheng",
+                    "Custom middleware rejects uncited model responses",
+                    "Grounded in Constitution of Kenya 2010 and IEBC Voter Guide"
                 ]
             },
             {
-                "name": "AI Chatbot",
-                "url": f"{self.github}/django_chatbot",
-                "tech_stack": ["Python", "Django", "TensorFlow", "React"],
-                "category": "AI/ML",
-                "description": "Intelligent conversational AI with context awareness",
+                "name": "Eliana Textiles",
+                "url": f"{self.github}/eliana-textiles",
+                "live": "https://eliana-textiles.vercel.app",
+                "tech_stack": ["React 19", "TypeScript", "Vite", "Tailwind 4", "Vercel", "Playwright"],
+                "category": "E-commerce",
+                "description": "Luxury bedding storefront for a Nairobi SMB at OTC Wholesale Mall",
                 "key_features": [
-                    "Natural language processing",
-                    "Contextual memory",
-                    "Multi-channel integration"
+                    "Built in 2 days with AI Studio + Claude Code",
+                    "Playwright E2E + Vitest unit test coverage",
+                    "Vercel serverless backend"
+                ]
+            },
+            {
+                "name": "Agent Governance Platform",
+                "url": f"{self.github}/AgentGovernance",
+                "tech_stack": ["Node.js", "Express", "SQLite", "Socket.io", "React"],
+                "category": "AI Infrastructure",
+                "description": "Zero-trust HITL infrastructure layer between AI agents and production systems",
+                "key_features": [
+                    "Deterministic rule engine with auto-approve/block/human routing",
+                    "Real-time approval dashboard via Socket.io",
+                    "Full audit log on every agent decision"
+                ]
+            },
+            {
+                "name": "RentPay",
+                "url": f"{self.github}/RentPay",
+                "tech_stack": ["Python", "Flask", "M-Pesa Daraja API", "Africa's Talking", "SQLite"],
+                "category": "FinTech / Telco",
+                "description": "USSD rent collection with M-Pesa STK Push — no app, no data plan required",
+                "key_features": [
+                    "Tenants pay via feature phones over USSD",
+                    "M-Pesa STK Push payment initiation",
+                    "SMS invoicing and landlord dashboard"
                 ]
             }
         ]
-        
+
         # Repositories for starter projects
         self.starter_repos = {
-            "serverless": f"{self.github}/serverless-starter",
-            "ai_ml": f"{self.github}/sentiment-analysis-api",
-            "devops": f"{self.github}/cicd-starter",
-            "api": f"{self.github}/fastapi-starter"
+            "ai_agents": f"{self.github}/sauti-ya-mwananchi",
+            "ecommerce": f"{self.github}/eliana-textiles",
+            "governance": f"{self.github}/AgentGovernance",
+            "ussd": f"{self.github}/RentPay"
         }
     
     def _check_availability(self) -> Dict[str, Any]:
@@ -147,13 +167,13 @@ class SoftwareEngineer:
         if availability_percentage < 30:
             project_types = ["Technical Consulting (limited hours)"]
         elif availability_percentage < 60:
-            project_types = ["Backend Development", "Cloud Architecture", "Technical Consulting"]
+            project_types = ["AI Engineering", "Founding Engineer", "Developer Relations"]
         else:
             project_types = [
-                "Backend Development", 
-                "Cloud Architecture", 
-                "Technical Consulting",
-                "Open Source Collaboration",
+                "AI Engineering",
+                "Founding Engineer",
+                "Developer Relations",
+                "Building in Public",
                 "Mentorship"
             ]
             
@@ -196,64 +216,64 @@ class SoftwareEngineer:
             "technologies": []
         }
         
-        # Cloud/AWS recommendations
-        if any(keyword in interest for keyword in ["cloud", "aws", "infrastructure", "serverless"]):
+        # AI agent recommendations
+        if any(keyword in interest for keyword in ["ai", "agents", "llm", "gemini", "claude", "machine learning", "artificial intelligence"]):
             recommendation.update({
-                "project_idea": "Serverless API with AWS Lambda",
+                "project_idea": "Civic accountability AI agent with cite-or-refuse middleware",
+                "difficulty": "Intermediate",
+                "estimated_time": "1 day (with AI tooling)",
+                "resources": [
+                    "Google ADK documentation",
+                    "Gemini on Vertex AI",
+                    "FastAPI + Cloud Run deployment guide"
+                ],
+                "starter_repo": self.starter_repos["ai_agents"],
+                "technologies": ["Python", "FastAPI", "Google ADK", "Gemini", "Cloud Run"]
+            })
+
+        # E-commerce / storefront recommendations
+        elif any(keyword in interest for keyword in ["ecommerce", "storefront", "shop", "react", "vercel", "frontend"]):
+            recommendation.update({
+                "project_idea": "SMB storefront with serverless backend and full test coverage",
+                "difficulty": "Beginner to Intermediate",
+                "estimated_time": "2 days (with Claude Code)",
+                "resources": [
+                    "React 19 + Vite docs",
+                    "Vercel serverless functions",
+                    "Playwright E2E testing guide"
+                ],
+                "starter_repo": self.starter_repos["ecommerce"],
+                "technologies": ["React 19", "TypeScript", "Vite", "Tailwind 4", "Vercel", "Playwright"]
+            })
+
+        # USSD / telco / Africa-specific recommendations
+        elif any(keyword in interest for keyword in ["ussd", "mpesa", "sms", "africa", "kenya", "telco", "feature phone"]):
+            recommendation.update({
+                "project_idea": "USSD rent collection with M-Pesa STK Push",
                 "difficulty": "Intermediate",
                 "estimated_time": "1-2 weeks",
                 "resources": [
-                    "AWS Lambda documentation", 
-                    "Serverless Framework docs", 
-                    "AWS API Gateway tutorials"
+                    "Africa's Talking USSD docs",
+                    "M-Pesa Daraja API guide",
+                    "Flask + SQLite quickstart"
                 ],
-                "starter_repo": self.starter_repos["serverless"],
-                "technologies": ["AWS Lambda", "API Gateway", "DynamoDB", "Serverless Framework"]
+                "starter_repo": self.starter_repos["ussd"],
+                "technologies": ["Python", "Flask", "M-Pesa Daraja API", "Africa's Talking", "SQLite"]
             })
-            
-        # AI/ML recommendations
-        elif any(keyword in interest for keyword in ["ai", "ml", "machine learning", "artificial intelligence", "nlp"]):
-            recommendation.update({
-                "project_idea": "Sentiment Analysis API",
-                "difficulty": "Intermediate",
-                "estimated_time": "2-3 weeks",
-                "resources": [
-                    "TensorFlow tutorials", 
-                    "NLTK documentation", 
-                    "FastAPI documentation"
-                ],
-                "starter_repo": self.starter_repos["ai_ml"],
-                "technologies": ["Python", "TensorFlow/PyTorch", "NLTK", "FastAPI"]
-            })
-            
-        # DevOps recommendations
-        elif any(keyword in interest for keyword in ["devops", "ci/cd", "pipeline", "automation"]):
-            recommendation.update({
-                "project_idea": "CI/CD Pipeline with GitHub Actions",
-                "difficulty": "Intermediate",
-                "estimated_time": "1-2 weeks",
-                "resources": [
-                    "GitHub Actions documentation", 
-                    "Docker tutorials", 
-                    "Testing automation guides"
-                ],
-                "starter_repo": self.starter_repos["devops"],
-                "technologies": ["GitHub Actions", "Docker", "Testing frameworks", "Infrastructure as Code"]
-            })
-            
-        # Default API recommendation
+
+        # Default: agent governance / infrastructure
         else:
             recommendation.update({
-                "project_idea": "RESTful API with FastAPI",
-                "difficulty": "Beginner to Intermediate",
-                "estimated_time": "1 week",
+                "project_idea": "Zero-trust HITL governance layer for AI agents",
+                "difficulty": "Intermediate",
+                "estimated_time": "1-2 weeks",
                 "resources": [
-                    "FastAPI documentation", 
-                    "PostgreSQL tutorials", 
-                    "API design best practices"
+                    "Socket.io real-time docs",
+                    "Knex query builder guide",
+                    "React + Vite dashboard setup"
                 ],
-                "starter_repo": self.starter_repos["api"],
-                "technologies": ["Python", "FastAPI", "PostgreSQL", "SQLAlchemy", "Pydantic"]
+                "starter_repo": self.starter_repos["governance"],
+                "technologies": ["Node.js", "Express", "Knex", "SQLite", "Socket.io", "React"]
             })
             
         return recommendation
@@ -333,28 +353,24 @@ class SoftwareEngineer:
             time_greeting = "Good evening"
             
         if visitor_name:
-            greeting = f"{time_greeting}, {visitor_name}! Thanks for checking out my profile."
+            greeting = f"{time_greeting}, {visitor_name}. I'm Kenn — AI Builder in Nairobi."
         else:
-            greeting = f"{time_greeting}! Thanks for dropping by my profile."
-            
-        # Add a random tip or project highlight
-        random_interest = random.choice(self.interests)
+            greeting = f"{time_greeting}. I'm Kenn — AI Builder in Nairobi, founder of SuperiaTech."
+
         random_project = random.choice(self.projects)
-        
-        if random.choice([True, False]):
-            # Highlight a technical interest
-            highlight = f"I'm currently exploring {random_interest}. Have any interesting projects in that area?"
-        else:
-            # Highlight a project
-            highlight = f"Check out my {random_project['name']} project if you're interested in {random_project['category']}!"
-            
-        # Format availability information
+        live = f" · Live: {random_project['live']}" if random_project.get('live') else ""
+        highlight = (
+            f"Latest: {random_project['name']} — {random_project['description']}\n"
+            f"  Stack: {', '.join(random_project['tech_stack'])}\n"
+            f"  GitHub: {random_project['url']}{live}"
+        )
+
         availability_info = (
-            f"Current Status: {colored(self.availability['status'], 'green' if self.availability['percentage'] > 60 else 'yellow')}\n"
-            f"Available for: {', '.join(self.availability['project_types'])}\n"
+            f"Status: {colored(self.availability['status'], 'green' if self.availability['percentage'] > 60 else 'yellow')}\n"
+            f"Open to: {', '.join(self.availability['project_types'])}\n"
             f"Can start: {self.availability['start_date']}"
         )
-            
+
         return f"{greeting}\n\n{highlight}\n\n{availability_info}"
 
     def to_json(self) -> str:
@@ -377,53 +393,52 @@ class SoftwareEngineer:
         """
         report = [
             f"{'=' * 50}",
-            f"{self.name} - {self.role}".center(50),
+            f"{self.name} — {self.role}".center(50),
+            f"{self.location}".center(50),
             f"{'=' * 50}",
             f"",
-            f"MISSION:",
+            f"WHAT I DO:",
             f"  {self.mission}",
             f"",
-            f"TECHNICAL SKILLS:",
-            f"  Languages:"
+            f"STACK:",
+            f"  Languages:",
         ]
-        
-        # Add language details
+
         for lang, details in self.languages.items():
-            report.append(f"    - {lang}: {details['level']} ({details['years']} years)")
-            report.append(f"      Frameworks: {', '.join(details['frameworks'])}")
-            
+            report.append(f"    - {lang}: {details['level']} · {', '.join(details['frameworks'])}")
+
         report.extend([
             f"",
-            f"  Cloud & DevOps:"
+            f"  Cloud & AI:",
         ])
-        
-        # Add cloud skills
+
         for skill in self.cloud_skills:
             report.append(f"    - {skill['name']}: {skill['level']}")
-            
+
         report.extend([
             f"",
-            f"PROJECTS:"
+            f"SELECTED WORK:",
         ])
-        
-        # Add project details
+
         for project in self.projects:
-            report.append(f"  - {project['name']}: {project['description']}")
-            report.append(f"    Tech: {', '.join(project['tech_stack'])}")
-            
+            live = f" · {project['live']}" if project.get('live') else ""
+            report.append(f"  {project['name']} — {project['description']}")
+            report.append(f"    Stack: {', '.join(project['tech_stack'])}")
+            report.append(f"    {project['url']}{live}")
+            report.append(f"")
+
         report.extend([
-            f"",
-            f"CURRENT AVAILABILITY:",
-            f"  Status: {self.availability['status']}",
-            f"  Available for: {', '.join(self.availability['project_types'])}",
+            f"AVAILABILITY:",
+            f"  {self.availability['status']} — {', '.join(self.availability['project_types'])}",
             f"  Can start: {self.availability['start_date']}",
             f"",
             f"CONTACT:",
-            f"  GitHub: {self.github}",
+            f"  {self.github}",
+            f"  superiorwech@gmail.com",
             f"",
             f"{'=' * 50}",
-            f"Generated on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
-            f"{'=' * 50}"
+            f"Generated {datetime.now().strftime('%Y-%m-%d %H:%M')}",
+            f"{'=' * 50}",
         ])
         
         return "\n".join(report)
@@ -465,7 +480,7 @@ def main():
     parser.add_argument('--report', action='store_true', help='Generate a formatted text report')
     args = parser.parse_args()
     
-    me = SoftwareEngineer()
+    me = AIBuilder()
     
     # Print greeting
     print(me.say_hi(args.name))
