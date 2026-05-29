@@ -8,33 +8,51 @@ useful information and project recommendations.
 Usage:
   - Run directly: python github_profile.py
   - With arguments: python github_profile.py --interest "Cloud Architecture" --name "Visitor"
-  
+  - Chat with AI: python github_profile.py --chat
+
 Dependencies:
-  - termcolor: pip install termcolor
-  - requests: pip install requests (for GitHub API integration)
+  - rich: pip install rich
+  - anthropic: pip install anthropic  (for --chat)
+  - requests: pip install requests    (for --stats)
 """
 
 import random
 import json
 import argparse
 import os
+import time
 from datetime import datetime
 from typing import List, Dict, Optional, Union, Any
 
-try:
-    from termcolor import colored
-    COLORS_ENABLED = True
-except ImportError:
-    # Fallback if termcolor isn't installed
-    def colored(text, color=None, **kwargs):
-        return text
-    COLORS_ENABLED = False
+from rich.console import Console
+from rich.panel import Panel
+from rich.table import Table
+from rich.text import Text
+from rich.columns import Columns
+from rich.rule import Rule
+from rich import box
+
+console = Console()
 
 try:
     import requests
     REQUESTS_ENABLED = True
 except ImportError:
     REQUESTS_ENABLED = False
+
+try:
+    import anthropic
+    ANTHROPIC_ENABLED = True
+except ImportError:
+    ANTHROPIC_ENABLED = False
+
+
+def typewrite(text: str, delay: float = 0.018, style: str = "") -> None:
+    """Print text character by character for a live-typing effect."""
+    for char in text:
+        console.print(char, end="", style=style)
+        time.sleep(delay)
+    console.print()
 
 
 class AIBuilder:
@@ -43,7 +61,6 @@ class AIBuilder:
     based on visitor's interests. Can be run locally after cloning.
     """
     def __init__(self):
-        """Initialize with personal and professional information."""
         self.name = "Kenn Macharia"
         self.role = "AI Builder"
         self.location = "Nairobi, Kenya"
@@ -78,8 +95,7 @@ class AIBuilder:
         self.interests = ["AI Agents", "Informal Economy", "Africa Tech", "Building in Public"]
         self.github = f"https://github.com/{self.github_username}"
         self.availability = self._check_availability()
-        
-        # Projects information with tech stacks and descriptions
+
         self.projects = sorted([
             {
                 "name": "Sauti ya Mwananchi",
@@ -137,37 +153,27 @@ class AIBuilder:
             },
         ], key=lambda p: p["priority"])
 
-        # Repositories for starter projects
         self.starter_repos = {
             "ai_agents": f"{self.github}/sauti-ya-mwananchi",
             "ecommerce": f"{self.github}/eliana-textiles",
             "governance": f"{self.github}/AgentGovernance",
             "ussd": f"{self.github}/RentPay"
         }
-    
+
     def _check_availability(self) -> Dict[str, Any]:
-        """
-        Check current availability for new projects based on current date.
-        This simulates real-world availability that changes throughout the year.
-        
-        Returns:
-            Dict containing availability status and project types
-        """
         current_month = datetime.now().month
         current_year = datetime.now().year
-        
-        # Simulate varying availability throughout the year
-        if current_month in [4, 8, 12]:  # Busy months
+
+        if current_month in [4, 8, 12]:
             status = "Limited Availability"
             availability_percentage = 25
-        elif current_month in [1, 5, 9]:  # Moderately busy
+        elif current_month in [1, 5, 9]:
             status = "Partial Availability"
             availability_percentage = 50
-        else:  # Open months
+        else:
             status = "Open to Opportunities"
             availability_percentage = 90
-            
-        # Project types I'm currently accepting
+
         if availability_percentage < 30:
             project_types = ["Technical Consulting (limited hours)"]
         elif availability_percentage < 60:
@@ -180,37 +186,25 @@ class AIBuilder:
                 "Building in Public",
                 "Mentorship"
             ]
-            
-        # Calculate an approximate start date
+
         if availability_percentage > 75:
             start_date = "Immediately"
         elif availability_percentage > 40:
-            start_date = f"In 2-3 weeks"
+            start_date = "In 2-3 weeks"
         else:
             next_month = current_month + 1 if current_month < 12 else 1
             next_year = current_year if current_month < 12 else current_year + 1
             start_date = f"{datetime(next_year, next_month, 1).strftime('%B %Y')}"
-            
+
         return {
             "status": status,
             "percentage": availability_percentage,
             "project_types": project_types,
             "start_date": start_date
         }
-    
+
     def recommend_project(self, interest: str) -> Dict[str, Any]:
-        """
-        Recommend a starter project based on visitor's interest.
-        
-        Args:
-            interest: The visitor's area of interest
-            
-        Returns:
-            Dict with project recommendation details
-        """
         interest = interest.lower()
-        
-        # Base recommendation structure
         recommendation = {
             "project_idea": "",
             "difficulty": "",
@@ -219,8 +213,7 @@ class AIBuilder:
             "starter_repo": "",
             "technologies": []
         }
-        
-        # AI agent recommendations
+
         if any(keyword in interest for keyword in ["ai", "agents", "llm", "gemini", "claude", "machine learning", "artificial intelligence"]):
             recommendation.update({
                 "project_idea": "Civic accountability AI agent with cite-or-refuse middleware",
@@ -234,8 +227,6 @@ class AIBuilder:
                 "starter_repo": self.starter_repos["ai_agents"],
                 "technologies": ["Python", "FastAPI", "Google ADK", "Gemini", "Cloud Run"]
             })
-
-        # E-commerce / storefront recommendations
         elif any(keyword in interest for keyword in ["ecommerce", "storefront", "shop", "react", "vercel", "frontend"]):
             recommendation.update({
                 "project_idea": "SMB storefront with serverless backend and full test coverage",
@@ -249,8 +240,6 @@ class AIBuilder:
                 "starter_repo": self.starter_repos["ecommerce"],
                 "technologies": ["React 19", "TypeScript", "Vite", "Tailwind 4", "Vercel", "Playwright"]
             })
-
-        # USSD / telco / Africa-specific recommendations
         elif any(keyword in interest for keyword in ["ussd", "mpesa", "sms", "africa", "kenya", "telco", "feature phone"]):
             recommendation.update({
                 "project_idea": "USSD rent collection with M-Pesa STK Push",
@@ -264,8 +253,6 @@ class AIBuilder:
                 "starter_repo": self.starter_repos["ussd"],
                 "technologies": ["Python", "Flask", "M-Pesa Daraja API", "Africa's Talking", "SQLite"]
             })
-
-        # Default: agent governance / infrastructure
         else:
             recommendation.update({
                 "project_idea": "Zero-trust HITL governance layer for AI agents",
@@ -279,44 +266,29 @@ class AIBuilder:
                 "starter_repo": self.starter_repos["governance"],
                 "technologies": ["Node.js", "Express", "Knex", "SQLite", "Socket.io", "React"]
             })
-            
+
         return recommendation
-    
+
     def get_skills_by_category(self, category: str) -> List[Any]:
-        """
-        Return skills by category (language, cloud, database, etc).
-        
-        Args:
-            category: The skill category to retrieve
-            
-        Returns:
-            List of skills in the requested category
-        """
         categories = {
             "language": list(self.languages.keys()),
             "cloud": self.cloud_skills,
             "interests": self.interests,
             "frameworks": [
-                framework 
-                for language in self.languages.values() 
+                framework
+                for language in self.languages.values()
                 for framework in language["frameworks"]
             ]
         }
         return categories.get(category.lower(), [])
-    
+
     def get_repository_stats(self) -> Dict[str, Any]:
-        """
-        Fetch real-time stats about GitHub repositories if requests is available.
-        
-        Returns:
-            Dict with repository statistics or error message
-        """
         if not REQUESTS_ENABLED:
             return {
                 "status": "error",
                 "message": "Requests library not installed. Install with 'pip install requests'"
             }
-            
+
         try:
             response = requests.get(f"https://api.github.com/users/{self.github_username}/repos")
             if response.status_code == 200:
@@ -335,214 +307,342 @@ class AIBuilder:
                     "languages": list(set(repo["language"] for repo in repos if repo["language"]))
                 }
             return {
-                "status": "error", 
+                "status": "error",
                 "message": f"Could not fetch repository data. Status code: {response.status_code}"
             }
         except Exception as e:
             return {"status": "error", "message": f"Error fetching repository data: {str(e)}"}
-    
-    def say_hi(self, visitor_name: Optional[str] = None) -> str:
-        """
-        Generate a personalized greeting with current availability.
-        
-        Args:
-            visitor_name: Optional name of the visitor for personalization
-            
-        Returns:
-            Formatted greeting string
-        """
+
+    def _build_system_prompt(self) -> str:
+        projects_text = "\n".join(
+            f"- {p['name']} ({p['category']}): {p['description']}. Stack: {', '.join(p['tech_stack'])}. URL: {p['url']}"
+            + (f". Live: {p['live']}" if p.get('live') else "")
+            for p in self.projects
+        )
+        langs_text = "\n".join(
+            f"- {lang}: {details['level']}, {details['years']} years, frameworks: {', '.join(details['frameworks'])}"
+            for lang, details in self.languages.items()
+        )
+        cloud_text = "\n".join(f"- {s['name']}: {s['level']}" for s in self.cloud_skills)
+        availability = self.availability
+
+        return f"""You are an AI assistant representing Kenn Macharia's GitHub profile. Answer questions about Kenn in first person, as if you are Kenn. Be concise, direct, and confident. Reflect Kenn's personality: pragmatic builder who ships fast, focused on Africa's informal economy.
+
+ABOUT KENN:
+Name: {self.name}
+Role: {self.role}
+Location: {self.location}
+Mission: {self.mission}
+GitHub: {self.github}
+Email: superiorwech@gmail.com
+Company: SuperiaTech (https://superiatech.vercel.app/)
+
+LANGUAGES:
+{langs_text}
+
+CLOUD & AI:
+{cloud_text}
+
+PROJECTS (priority order):
+{projects_text}
+
+AVAILABILITY:
+Status: {availability['status']}
+Open to: {', '.join(availability['project_types'])}
+Can start: {availability['start_date']}
+
+CERTIFICATIONS:
+- AWS Certified Cloud Practitioner (Oct 2024)
+- AWS Academy Graduate, Cloud Foundations (Dec 2024)
+- Africa's Talking × Google AI Program (Oct 2025)
+- KCNA in progress
+
+Keep answers short (2-4 sentences unless more detail is asked for). If asked something you don't know about Kenn, say so honestly rather than making things up."""
+
+    def chat(self) -> None:
+        """Start an interactive AI-powered chat session about this profile."""
+        if not ANTHROPIC_ENABLED:
+            console.print(Panel(
+                "[red]anthropic package not installed.[/red]\nRun: [bold]pip install anthropic[/bold]",
+                title="Chat Unavailable", border_style="red"
+            ))
+            return
+
+        api_key = os.environ.get("ANTHROPIC_API_KEY")
+        if not api_key:
+            console.print(Panel(
+                "[red]ANTHROPIC_API_KEY environment variable not set.[/red]\n"
+                "Export your key: [bold]export ANTHROPIC_API_KEY=your_key_here[/bold]",
+                title="Chat Unavailable", border_style="red"
+            ))
+            return
+
+        client = anthropic.Anthropic(api_key=api_key)
+        system_prompt = self._build_system_prompt()
+        history: List[Dict[str, str]] = []
+
+        console.print(Rule("[bold cyan]Chat with Kenn's AI[/bold cyan]"))
+        console.print("[dim]Ask me anything about my work, stack, availability, or projects.[/dim]")
+        console.print("[dim]Type [bold]exit[/bold] or [bold]quit[/bold] to leave.\n[/dim]")
+
+        while True:
+            try:
+                user_input = console.input("[bold green]You:[/bold green] ").strip()
+            except (KeyboardInterrupt, EOFError):
+                console.print("\n[dim]Goodbye![/dim]")
+                break
+
+            if not user_input:
+                continue
+            if user_input.lower() in ("exit", "quit", "bye"):
+                console.print("[dim]Goodbye![/dim]")
+                break
+
+            history.append({"role": "user", "content": user_input})
+
+            try:
+                console.print("[bold cyan]Kenn:[/bold cyan] ", end="")
+                full_response = ""
+                with client.messages.stream(
+                    model="claude-haiku-4-5-20251001",
+                    max_tokens=512,
+                    system=system_prompt,
+                    messages=history,
+                ) as stream:
+                    for text in stream.text_stream:
+                        console.print(text, end="")
+                        full_response += text
+                console.print()
+                history.append({"role": "assistant", "content": full_response})
+            except Exception as e:
+                console.print(f"\n[red]Error: {e}[/red]")
+
+    def print_greeting(self, visitor_name: Optional[str] = None) -> None:
+        """Print a rich-formatted greeting panel."""
         current_time = datetime.now()
-        
-        # Determine time-appropriate greeting
         if current_time.hour < 12:
             time_greeting = "Good morning"
         elif current_time.hour < 18:
             time_greeting = "Good afternoon"
         else:
             time_greeting = "Good evening"
-            
+
         if visitor_name:
-            greeting = f"{time_greeting}, {visitor_name}. I'm Kenn — AI Builder in Nairobi."
+            greeting_line = f"{time_greeting}, [bold]{visitor_name}[/bold]. I'm Kenn — AI Builder in Nairobi."
         else:
-            greeting = f"{time_greeting}. I'm Kenn — AI Builder in Nairobi, founder of SuperiaTech."
+            greeting_line = f"{time_greeting}. I'm [bold cyan]Kenn Macharia[/bold cyan] — AI Builder in Nairobi, founder of SuperiaTech."
+
+        avail_pct = self.availability["percentage"]
+        avail_color = "green" if avail_pct > 60 else ("yellow" if avail_pct > 30 else "red")
+        avail_text = (
+            f"[{avail_color}]{self.availability['status']}[/{avail_color}]  ·  "
+            f"Can start: [bold]{self.availability['start_date']}[/bold]\n"
+            f"Open to: {', '.join(self.availability['project_types'])}"
+        )
 
         random_project = random.choice(self.projects)
-        live = f" · Live: {random_project['live']}" if random_project.get('live') else ""
-        highlight = (
-            f"Latest: {random_project['name']} — {random_project['description']}\n"
-            f"  Stack: {', '.join(random_project['tech_stack'])}\n"
-            f"  GitHub: {random_project['url']}{live}"
+        live_line = f"\n  [dim]Live →[/dim] {random_project['live']}" if random_project.get("live") else ""
+        project_text = (
+            f"[bold]{random_project['name']}[/bold]  [dim]({random_project['category']})[/dim]\n"
+            f"  {random_project['description']}\n"
+            f"  [dim]Stack:[/dim] {', '.join(random_project['tech_stack'])}\n"
+            f"  [dim]GitHub →[/dim] {random_project['url']}{live_line}"
         )
 
-        availability_info = (
-            f"Status: {colored(self.availability['status'], 'green' if self.availability['percentage'] > 60 else 'yellow')}\n"
-            f"Open to: {', '.join(self.availability['project_types'])}\n"
-            f"Can start: {self.availability['start_date']}"
-        )
+        console.print()
+        console.print(Panel(greeting_line, subtitle=self.mission, border_style="cyan", padding=(0, 2)))
+        console.print()
 
-        return f"{greeting}\n\n{highlight}\n\n{availability_info}"
+        cols = Columns([
+            Panel(project_text, title="[bold]Featured Project[/bold]", border_style="blue", padding=(0, 2)),
+            Panel(avail_text, title="[bold]Availability[/bold]", border_style=avail_color, padding=(0, 2)),
+        ], equal=True)
+        console.print(cols)
+        console.print()
+
+    def print_recommendation(self, interest: str) -> None:
+        """Print a rich-formatted project recommendation."""
+        rec = self.recommend_project(interest)
+
+        table = Table(box=box.ROUNDED, border_style="blue", show_header=False, padding=(0, 1))
+        table.add_column("Field", style="dim", width=18)
+        table.add_column("Value", style="white")
+
+        table.add_row("Project idea", f"[bold]{rec['project_idea']}[/bold]")
+        table.add_row("Difficulty", rec["difficulty"])
+        table.add_row("Estimated time", rec["estimated_time"])
+        table.add_row("Technologies", ", ".join(rec["technologies"]))
+        table.add_row("Starter repo", f"[cyan]{rec['starter_repo']}[/cyan]")
+        table.add_row("Resources", "\n".join(f"· {r}" for r in rec["resources"]))
+
+        console.print(Panel(
+            table,
+            title=f"[bold cyan]Recommendation for: {interest}[/bold cyan]",
+            border_style="cyan"
+        ))
+
+    def print_stats(self) -> None:
+        """Print a rich-formatted GitHub stats panel."""
+        with console.status("[cyan]Fetching GitHub stats...[/cyan]"):
+            stats = self.get_repository_stats()
+
+        if stats.get("status") != "success":
+            console.print(Panel(f"[red]{stats.get('message')}[/red]", title="GitHub Stats", border_style="red"))
+            return
+
+        summary = Table(box=box.SIMPLE, show_header=False, padding=(0, 2))
+        summary.add_column("Metric", style="dim")
+        summary.add_column("Value", style="bold cyan")
+        summary.add_row("Total repos", str(stats["total_repos"]))
+        summary.add_row("Total stars", str(stats["stars"]))
+        summary.add_row("Total forks", str(stats["forks"]))
+        summary.add_row("Most popular", stats["most_popular"] or "—")
+        summary.add_row("Languages", ", ".join(stats["languages"]))
+
+        repo_table = Table(box=box.ROUNDED, border_style="blue", padding=(0, 1))
+        repo_table.add_column("Repository", style="bold")
+        repo_table.add_column("Stars", justify="right", style="yellow")
+        repo_table.add_column("Forks", justify="right", style="cyan")
+        for repo in stats["repos_by_stars"]:
+            repo_table.add_row(repo["name"], str(repo["stars"]), str(repo["forks"]))
+
+        console.print(Panel(summary, title="[bold]GitHub Overview[/bold]", border_style="cyan"))
+        console.print(Panel(repo_table, title="[bold]Repositories (sorted by stars)[/bold]", border_style="blue"))
+
+    def print_report(self) -> None:
+        """Print a rich-formatted full profile report."""
+        console.print(Rule(f"[bold cyan]{self.name} — {self.role}[/bold cyan]"))
+        console.print(f"[dim]{self.location}  ·  {self.github}[/dim]\n")
+
+        # Languages table
+        lang_table = Table(box=box.ROUNDED, border_style="blue", padding=(0, 1))
+        lang_table.add_column("Language", style="bold")
+        lang_table.add_column("Level")
+        lang_table.add_column("Years", justify="right")
+        lang_table.add_column("Frameworks", style="dim")
+        for lang, d in self.languages.items():
+            lang_table.add_row(lang, d["level"], str(d["years"]), ", ".join(d["frameworks"]))
+
+        # Cloud table
+        cloud_table = Table(box=box.ROUNDED, border_style="blue", padding=(0, 1))
+        cloud_table.add_column("Platform", style="bold")
+        cloud_table.add_column("Level")
+        for s in self.cloud_skills:
+            cloud_table.add_row(s["name"], s["level"])
+
+        console.print(Columns([
+            Panel(lang_table, title="[bold]Languages[/bold]", border_style="cyan"),
+            Panel(cloud_table, title="[bold]Cloud & AI[/bold]", border_style="cyan"),
+        ], equal=True))
+
+        # Projects
+        console.print()
+        console.print(Rule("[bold]Selected Work[/bold]"))
+        for p in self.projects:
+            live_line = f"\n  [dim]Live →[/dim] [cyan]{p['live']}[/cyan]" if p.get("live") else ""
+            features = "\n".join(f"  [dim]·[/dim] {f}" for f in p["key_features"])
+            console.print(Panel(
+                f"[bold]{p['name']}[/bold]  [dim]({p['category']})[/dim]\n"
+                f"{p['description']}\n\n"
+                f"[dim]Stack:[/dim] {', '.join(p['tech_stack'])}\n"
+                f"[dim]GitHub →[/dim] [cyan]{p['url']}[/cyan]{live_line}\n\n"
+                f"{features}",
+                border_style="blue",
+                padding=(0, 2)
+            ))
+
+        # Availability
+        avail_pct = self.availability["percentage"]
+        avail_color = "green" if avail_pct > 60 else ("yellow" if avail_pct > 30 else "red")
+        console.print(Panel(
+            f"[{avail_color}]{self.availability['status']}[/{avail_color}]  ·  "
+            f"Can start: [bold]{self.availability['start_date']}[/bold]\n"
+            f"Open to: {', '.join(self.availability['project_types'])}\n\n"
+            f"[dim]Contact:[/dim] superiorwech@gmail.com  ·  {self.github}",
+            title="[bold]Availability & Contact[/bold]",
+            border_style=avail_color
+        ))
 
     def to_json(self) -> str:
-        """
-        Return a JSON representation of this profile.
-        
-        Returns:
-            JSON string of the profile
-        """
-        # Create a clean dict without methods for JSON serialization
         profile_dict = {k: v for k, v in self.__dict__.items() if not k.startswith('_') and not callable(v)}
         return json.dumps(profile_dict, indent=2)
-    
-    def generate_report(self) -> str:
-        """
-        Generate a formatted text report about this profile.
-        
-        Returns:
-            Formatted text report
-        """
-        report = [
-            f"{'=' * 50}",
-            f"{self.name} — {self.role}".center(50),
-            f"{self.location}".center(50),
-            f"{'=' * 50}",
-            f"",
-            f"WHAT I DO:",
-            f"  {self.mission}",
-            f"",
-            f"STACK:",
-            f"  Languages:",
-        ]
 
-        for lang, details in self.languages.items():
-            report.append(f"    - {lang}: {details['level']} · {', '.join(details['frameworks'])}")
-
-        report.extend([
-            f"",
-            f"  Cloud & AI:",
-        ])
-
-        for skill in self.cloud_skills:
-            report.append(f"    - {skill['name']}: {skill['level']}")
-
-        report.extend([
-            f"",
-            f"SELECTED WORK:",
-        ])
-
-        for project in self.projects:
-            live = f" · {project['live']}" if project.get('live') else ""
-            report.append(f"  {project['name']} — {project['description']}")
-            report.append(f"    Stack: {', '.join(project['tech_stack'])}")
-            report.append(f"    {project['url']}{live}")
-            report.append(f"")
-
-        report.extend([
-            f"AVAILABILITY:",
-            f"  {self.availability['status']} — {', '.join(self.availability['project_types'])}",
-            f"  Can start: {self.availability['start_date']}",
-            f"",
-            f"CONTACT:",
-            f"  {self.github}",
-            f"  superiorwech@gmail.com",
-            f"",
-            f"{'=' * 50}",
-            f"Generated {datetime.now().strftime('%Y-%m-%d %H:%M')}",
-            f"{'=' * 50}",
-        ])
-        
-        return "\n".join(report)
-    
     def save_profile(self, format_type: str = "json", filename: Optional[str] = None) -> str:
-        """
-        Save profile information to a file.
-        
-        Args:
-            format_type: 'json' or 'text'
-            filename: Optional custom filename
-            
-        Returns:
-            Path to the saved file
-        """
         if not filename:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            if format_type.lower() == "json":
-                filename = f"kenn_profile_{timestamp}.json"
-            else:
-                filename = f"kenn_profile_{timestamp}.txt"
-                
+            ext = "json" if format_type.lower() == "json" else "txt"
+            filename = f"kenn_profile_{timestamp}.{ext}"
+
         with open(filename, 'w') as f:
             if format_type.lower() == "json":
                 f.write(self.to_json())
             else:
-                f.write(self.generate_report())
-                
+                # Plain text fallback for save
+                console.print(f"[dim]Saving text report to {filename}...[/dim]")
+                lines = [
+                    f"{self.name} — {self.role}",
+                    f"{self.location}",
+                    "",
+                    f"Mission: {self.mission}",
+                    "",
+                    "Projects:",
+                ]
+                for p in self.projects:
+                    lines.append(f"  {p['name']} — {p['description']}")
+                    lines.append(f"    Stack: {', '.join(p['tech_stack'])}")
+                    lines.append(f"    {p['url']}")
+                    if p.get("live"):
+                        lines.append(f"    Live: {p['live']}")
+                    lines.append("")
+                lines.append(f"Availability: {self.availability['status']}")
+                lines.append(f"Contact: superiorwech@gmail.com")
+                f.write("\n".join(lines))
+
         return os.path.abspath(filename)
 
 
 def main():
-    """Command line interface for the profile."""
     parser = argparse.ArgumentParser(description='Interactive developer profile for Kenn Macharia')
     parser.add_argument('--interest', type=str, help='Get project recommendations for your interest')
     parser.add_argument('--name', type=str, help='Your name for a personalized greeting')
     parser.add_argument('--stats', action='store_true', help='Show GitHub repository statistics')
     parser.add_argument('--save', choices=['json', 'text'], help='Save profile to file in specified format')
-    parser.add_argument('--report', action='store_true', help='Generate a formatted text report')
+    parser.add_argument('--report', action='store_true', help='Generate a formatted profile report')
+    parser.add_argument('--chat', action='store_true', help='Chat with an AI that knows this profile (requires ANTHROPIC_API_KEY)')
     args = parser.parse_args()
-    
+
     me = AIBuilder()
-    
-    # Print greeting
-    print(me.say_hi(args.name))
-    
-    # Show project recommendation if interest is provided
+
+    if args.chat:
+        me.chat()
+        return
+
+    me.print_greeting(args.name)
+
     if args.interest:
-        print(f"\n{colored('PROJECT RECOMMENDATION', 'cyan', attrs=['bold'])}")
-        print(f"Based on your interest in {args.interest}:")
-        recommendation = me.recommend_project(args.interest)
-        
-        print(f"  Project idea: {colored(recommendation['project_idea'], 'green')}")
-        print(f"  Difficulty: {recommendation['difficulty']}")
-        print(f"  Estimated time: {recommendation['estimated_time']}")
-        print(f"  Technologies: {', '.join(recommendation['technologies'])}")
-        print(f"  Starter repository: {recommendation['starter_repo']}")
-        print(f"  Helpful resources:")
-        for resource in recommendation['resources']:
-            print(f"    - {resource}")
-    
-    # Show GitHub stats if requested
+        me.print_recommendation(args.interest)
+
     if args.stats:
-        print(f"\n{colored('GITHUB STATISTICS', 'cyan', attrs=['bold'])}")
-        stats = me.get_repository_stats()
-        
-        if stats.get('status') == 'success':
-            print(f"  Total repositories: {stats['total_repos']}")
-            print(f"  Total stars: {stats['stars']}")
-            print(f"  Total forks: {stats['forks']}")
-            print(f"  Most popular repository: {stats['most_popular']}")
-            print(f"  Languages used: {', '.join(stats['languages'])}")
-            print(f"  Repositories (sorted by stars):")
-            for repo in stats.get('repos_by_stars', []):
-                print(f"    - {repo['name']}: {repo['stars']} stars, {repo['forks']} forks")
-        else:
-            print(f"  {stats.get('message', 'Could not retrieve GitHub statistics')}")
-    
-    # Generate report if requested
+        me.print_stats()
+
     if args.report:
-        print(f"\n{me.generate_report()}")
-    
-    # Save profile if requested
+        me.print_report()
+
     if args.save:
         filepath = me.save_profile(format_type=args.save)
-        print(f"\nProfile saved to: {filepath}")
-    
-    # Show instructions if no specific action was requested
+        console.print(f"\n[green]Profile saved to:[/green] {filepath}")
+
     if not any([args.interest, args.stats, args.report, args.save]):
-        print("\nFor more information, try these commands:")
-        print("  python github_profile.py --interest 'Cloud Architecture'")
-        print("  python github_profile.py --name 'Your Name'")
-        print("  python github_profile.py --stats")
-        print("  python github_profile.py --report")
-        print("  python github_profile.py --save json")
+        console.print("[dim]Try these commands:[/dim]")
+        tips = Table(box=box.SIMPLE, show_header=False, padding=(0, 1))
+        tips.add_column("Command", style="cyan")
+        tips.add_column("Description", style="dim")
+        tips.add_row("python github_profile.py --interest 'AI agents'", "Get a project recommendation")
+        tips.add_row("python github_profile.py --name 'Your Name'", "Personalized greeting")
+        tips.add_row("python github_profile.py --stats", "Live GitHub repo stats")
+        tips.add_row("python github_profile.py --report", "Full profile report")
+        tips.add_row("python github_profile.py --chat", "Chat with Kenn's AI (needs ANTHROPIC_API_KEY)")
+        console.print(tips)
 
 
 if __name__ == '__main__':

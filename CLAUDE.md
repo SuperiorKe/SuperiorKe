@@ -15,14 +15,17 @@ python github_profile.py                          # greeting + usage hints
 python github_profile.py --name "Visitor"         # personalized greeting
 python github_profile.py --interest "AI agents"   # project recommendation
 python github_profile.py --stats                  # live GitHub repo stats (requires requests)
-python github_profile.py --report                 # formatted text report
+python github_profile.py --report                 # formatted full profile report
 python github_profile.py --save json              # save profile to JSON file
+python github_profile.py --chat                   # AI chat mode (requires ANTHROPIC_API_KEY)
 ```
 
-Install optional dependencies:
+Install dependencies:
 ```bash
-pip install termcolor requests
+pip install rich requests anthropic
 ```
+
+For `--chat`: export `ANTHROPIC_API_KEY` before running. Uses `claude-haiku-4-5-20251001` with streaming and multi-turn history.
 
 ## Architecture of github_profile.py
 
@@ -34,12 +37,18 @@ Single-file, single-class design — `AIBuilder` holds all profile data and logi
 - `self.availability` — computed by `_check_availability()` based on current month; controls status messaging in `say_hi()`
 
 **Key methods:**
-- `say_hi()` — greeting + random featured project + availability status
-- `recommend_project(interest)` — keyword-matches interest string to one of four starter repos
-- `get_repository_stats()` — calls GitHub API, returns repos sorted by stars descending with a `repos_by_stars` ranked list
-- `generate_report()` / `to_json()` / `save_profile()` — output formatters
+- `print_greeting()` — rich panels: greeting + random featured project + availability side-by-side
+- `recommend_project(interest)` / `print_recommendation()` — keyword-matches interest to one of four starter repos, renders as a rich table
+- `get_repository_stats()` / `print_stats()` — calls GitHub API, returns repos sorted by stars descending
+- `print_report()` — full rich report: language/cloud tables + all projects + availability
+- `chat()` — interactive multi-turn AI chat using Claude (streaming), grounded in `_build_system_prompt()` which serialises the full profile into a system prompt
+- `to_json()` / `save_profile()` — output serialisers
 
-**Optional deps** are guarded with try/except at the top; `COLORS_ENABLED` and `REQUESTS_ENABLED` flags control feature availability gracefully.
+**Optional deps:** `requests` guarded by `REQUESTS_ENABLED`; `anthropic` by `ANTHROPIC_ENABLED`. Both degrade gracefully with a rich error panel. `rich` is a hard dependency now.
+
+## GitHub Actions
+
+`.github/workflows/update-readme.yml` — runs weekly (Mondays 07:00 UTC) and on every push to `main`. Fetches live repo stats via the GitHub API and injects/updates a badge block between `<!-- stats-start -->` and `<!-- stats-end -->` markers in `README.md`, then commits with `[skip ci]`.
 
 ## Keeping README.md and github_profile.py in sync
 
