@@ -80,13 +80,14 @@ class AIBuilder:
         self.availability = self._check_availability()
         
         # Projects information with tech stacks and descriptions
-        self.projects = [
+        self.projects = sorted([
             {
                 "name": "Sauti ya Mwananchi",
                 "url": f"{self.github}/sauti-ya-mwananchi",
                 "live": "https://sauti-ya-mwananchi-mu44pr45ha-uc.a.run.app",
                 "tech_stack": ["Python", "FastAPI", "Google ADK", "Gemini 2.0", "Cloud Run"],
                 "category": "Civic AI",
+                "priority": 1,
                 "description": "Cite-or-refuse civic accountability AI agent for Kenyan voters",
                 "key_features": [
                     "Answers in English, Swahili, or Sheng",
@@ -95,23 +96,11 @@ class AIBuilder:
                 ]
             },
             {
-                "name": "Eliana Textiles",
-                "url": f"{self.github}/eliana-textiles",
-                "live": "https://eliana-textiles.vercel.app",
-                "tech_stack": ["React 19", "TypeScript", "Vite", "Tailwind 4", "Vercel", "Playwright"],
-                "category": "E-commerce",
-                "description": "Luxury bedding storefront for a Nairobi SMB at OTC Wholesale Mall",
-                "key_features": [
-                    "Built in 2 days with AI Studio + Claude Code",
-                    "Playwright E2E + Vitest unit test coverage",
-                    "Vercel serverless backend"
-                ]
-            },
-            {
                 "name": "Agent Governance Platform",
                 "url": f"{self.github}/AgentGovernance",
                 "tech_stack": ["Node.js", "Express", "SQLite", "Socket.io", "React"],
                 "category": "AI Infrastructure",
+                "priority": 2,
                 "description": "Zero-trust HITL infrastructure layer between AI agents and production systems",
                 "key_features": [
                     "Deterministic rule engine with auto-approve/block/human routing",
@@ -124,14 +113,29 @@ class AIBuilder:
                 "url": f"{self.github}/RentPay",
                 "tech_stack": ["Python", "Flask", "M-Pesa Daraja API", "Africa's Talking", "SQLite"],
                 "category": "FinTech / Telco",
+                "priority": 3,
                 "description": "USSD rent collection with M-Pesa STK Push — no app, no data plan required",
                 "key_features": [
                     "Tenants pay via feature phones over USSD",
                     "M-Pesa STK Push payment initiation",
                     "SMS invoicing and landlord dashboard"
                 ]
-            }
-        ]
+            },
+            {
+                "name": "Eliana Textiles",
+                "url": f"{self.github}/eliana-textiles",
+                "live": "https://eliana-textiles.vercel.app",
+                "tech_stack": ["React 19", "TypeScript", "Vite", "Tailwind 4", "Vercel", "Playwright"],
+                "category": "E-commerce",
+                "priority": 4,
+                "description": "Luxury bedding storefront for a Nairobi SMB at OTC Wholesale Mall",
+                "key_features": [
+                    "Built in 2 days with AI Studio + Claude Code",
+                    "Playwright E2E + Vitest unit test coverage",
+                    "Vercel serverless backend"
+                ]
+            },
+        ], key=lambda p: p["priority"])
 
         # Repositories for starter projects
         self.starter_repos = {
@@ -317,12 +321,17 @@ class AIBuilder:
             response = requests.get(f"https://api.github.com/users/{self.github_username}/repos")
             if response.status_code == 200:
                 repos = response.json()
+                repos_sorted = sorted(repos, key=lambda x: x["stargazers_count"], reverse=True)
                 return {
                     "status": "success",
                     "total_repos": len(repos),
                     "stars": sum(repo["stargazers_count"] for repo in repos),
                     "forks": sum(repo["forks_count"] for repo in repos),
-                    "most_popular": max(repos, key=lambda x: x["stargazers_count"])["name"],
+                    "most_popular": repos_sorted[0]["name"] if repos_sorted else None,
+                    "repos_by_stars": [
+                        {"name": r["name"], "stars": r["stargazers_count"], "forks": r["forks_count"]}
+                        for r in repos_sorted
+                    ],
                     "languages": list(set(repo["language"] for repo in repos if repo["language"]))
                 }
             return {
@@ -511,6 +520,9 @@ def main():
             print(f"  Total forks: {stats['forks']}")
             print(f"  Most popular repository: {stats['most_popular']}")
             print(f"  Languages used: {', '.join(stats['languages'])}")
+            print(f"  Repositories (sorted by stars):")
+            for repo in stats.get('repos_by_stars', []):
+                print(f"    - {repo['name']}: {repo['stars']} stars, {repo['forks']} forks")
         else:
             print(f"  {stats.get('message', 'Could not retrieve GitHub statistics')}")
     
