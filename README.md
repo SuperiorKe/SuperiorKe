@@ -1,7 +1,7 @@
 # Kenn Macharia
 
 <!-- stats-start -->
-![Repos](https://img.shields.io/badge/repos-0-blue?style=flat-square) ![Stars](https://img.shields.io/badge/stars-0-yellow?style=flat-square) ![Forks](https://img.shields.io/badge/forks-0-cyan?style=flat-square)
+![Repos](https://img.shields.io/badge/repos-49-blue?style=flat-square) ![Stars](https://img.shields.io/badge/stars-7-yellow?style=flat-square) ![Forks](https://img.shields.io/badge/forks-2-cyan?style=flat-square)
 <!-- stats-end -->
 
 > I direct AI agents to ship real products for real users. Africa's informal economy is the constraint — and the opportunity.
