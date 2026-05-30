@@ -1,0 +1,93 @@
+name: Update README stats
+
+on:
+  schedule:
+    # Every Monday at 07:00 UTC (10:00 EAT)
+    - cron: '0 7 * * 1'
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch GitHub stats and update README badge line
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python - <<'EOF'
+          import requests, re, os, json
+
+          username = "SuperiorKe"
+          headers = {"Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}"}
+
+          resp = requests.get(
+              f"https://api.github.com/users/{username}/repos",
+              headers=headers,
+              params={"per_page": 100}
+          )
+          repos = resp.json() if resp.status_code == 200 else []
+
+          total_stars = sum(r.get("stargazers_count", 0) for r in repos)
+          total_forks = sum(r.get("forks_count", 0) for r in repos)
+          total_repos = len(repos)
+
+          badge_block = (
+              f"<!-- stats-start -->\n"
+              f"![Repos](https://img.shields.io/badge/repos-{total_repos}-blue?style=flat-square) "
+              f"![Stars](https://img.shields.io/badge/stars-{total_stars}-yellow?style=flat-square) "
+              f"![Forks](https://img.shields.io/badge/forks-{total_forks}-cyan?style=flat-square)\n"
+              f"<!-- stats-end -->"
+          )
+
+          with open("README.md", "r") as f:
+              content = f.read()
+
+          # Replace existing stats block or append after first heading
+          if "<!-- stats-start -->" in content:
+              content = re.sub(
+                  r"<!-- stats-start -->.*?<!-- stats-end -->",
+                  badge_block,
+                  content,
+                  flags=re.DOTALL
+              )
+          else:
+              # Insert after the first H1 line
+              content = re.sub(
+                  r"(^# .+$)",
+                  r"\1\n\n" + badge_block,
+                  content,
+                  count=1,
+                  flags=re.MULTILINE
+              )
+
+          with open("README.md", "w") as f:
+              f.write(content)
+
+          print(f"Updated: {total_repos} repos, {total_stars} stars, {total_forks} forks")
+          EOF
+
+      - name: Commit updated README
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet README.md || (
+            git add README.md &&
+            git commit -m "chore: update README stats [skip ci]"
+          )
+
+      - name: Push changes
+        run: git push origin HEAD
