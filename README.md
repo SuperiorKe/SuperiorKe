@@ -1,5 +1,9 @@
 # Kenn Macharia
 
+<!-- stats-start -->
+![Repos](https://img.shields.io/badge/repos-0-blue?style=flat-square) ![Stars](https://img.shields.io/badge/stars-0-yellow?style=flat-square) ![Forks](https://img.shields.io/badge/forks-0-cyan?style=flat-square)
+<!-- stats-end -->
+
 > I direct AI agents to ship real products for real users. Africa's informal economy is the constraint — and the opportunity.
 
 AI Builder in Nairobi. Founder of [SuperiaTech](https://superiatech.vercel.app/). I make the product decisions, the architecture decisions, the UX decisions — then direct AI agents (Claude Code, Gemini, ADK) to execute. Full-stack products shipped in days: storefronts, civic tools, infrastructure layers, USSD flows.
