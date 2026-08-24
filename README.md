@@ -115,9 +115,11 @@ AI / Agents     Google ADK · Gemini · LangGraph · LangChain · Anthropic
 Cloud           AWS · Google Cloud · Cloud Run · Vertex AI · Vercel
 Infrastructure  Docker · GitHub Actions
 Integrations    Africa's Talking · M-Pesa Daraja · Stripe
-Testing         Pytest · Vitest · Playwright · Testing Library
+Testing         Pytest · Vitest · Playwright · Testing Library ```
 
-Certifications & training
+---
+
+## Certifications & training
 AWS Certified Cloud Practitioner
 AWS Academy Graduate, Cloud Foundations
 Africa's Talking × Google AI Program
@@ -125,7 +127,10 @@ BeSA Cloud Academy, Agentic AI on AWS
 ALX Kenya, AWS Cloud Computing Program
 freeCodeCamp Responsive Web Design
 Scientific Computing with Python
-What I am looking for
+
+---
+
+## What I am looking for
 
 I am interested in AI Engineer, Backend Engineer, Product Engineer, and founding-engineer opportunities where I can work on real products alongside strong engineers.
 
@@ -133,7 +138,9 @@ I am particularly interested in teams working on AI systems, developer tools, in
 
 My long-term direction is simple: become an excellent technical builder and use that ability to build products of my own.
 
-Contact
+---
+
+## Contact
 superiorwech@gmail.com
 LinkedIn
 SuperiaTech
