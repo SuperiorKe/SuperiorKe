@@ -1,116 +1,118 @@
 # Kenn Macharia
 
-<!-- stats-start -->
-![Repos](https://img.shields.io/badge/repos-49-blue?style=flat-square) ![Stars](https://img.shields.io/badge/stars-7-yellow?style=flat-square) ![Forks](https://img.shields.io/badge/forks-2-cyan?style=flat-square)
-<!-- stats-end -->
+> AI Engineer building reliable agentic systems, backend services, and products for real users.
 
-> I direct AI agents to ship real products for real users. Africa's informal economy is the constraint — and the opportunity.
+I build software from problem definition through architecture, implementation, testing, deployment, and iteration.
 
-AI Builder in Nairobi. Founder of [SuperiaTech](https://superiatech.vercel.app/). I make the product decisions, the architecture decisions, the UX decisions — then direct AI agents (Claude Code, Gemini, ADK) to execute. Full-stack products shipped in days: storefronts, civic tools, infrastructure layers, USSD flows.
+My work sits at the intersection of **AI agents, backend engineering, cloud infrastructure, and real-world operating constraints**. I have built grounded AI systems, agent governance infrastructure, USSD and M-Pesa workflows, and full-stack products for real clients and users.
 
-The users I build for don't download apps. They run on M-Pesa callbacks, USSD sessions, Swahili-English code-switching, and feature phones. That constraint is what makes the work real.
+I use AI coding agents such as Claude Code, Gemini, and Codex to move faster, while retaining responsibility for architecture, verification, testing, debugging, and deployment.
+
+Based in Nairobi, Kenya. Open to remote opportunities.
 
 ---
 
 ## Selected work
 
-### Sauti ya Mwananchi — civic-accountability AI agent
-*Cite-or-refuse Gemini middleware on Cloud Run · Built in 6 hours at GDG Nairobi Agentathon*
+### Sauti ya Mwananchi
+**Grounded civic-information AI agent**
 
-Answers Kenyan voters' civic questions in English, Swahili, or Sheng — grounded in the Constitution of Kenya 2010 and the IEBC Voter Guide. A custom Python middleware intercepts every model response and rejects anything without a primary-source citation. The model never reaches the user unchecked.
+A civic-information AI agent built with Google ADK, Gemini, FastAPI, and Vertex AI. It uses the Constitution of Kenya 2010 and IEBC voter guidance as source material.
 
-**Stack:** Python · FastAPI · Google ADK · Gemini 2.0 (Vertex AI) · Cloud Run · Playwright
+A deterministic validation layer checks responses for required citations and can reject unsupported answers before they reach the user.
+
+**Stack:** Python · FastAPI · Google ADK · Gemini · Vertex AI · Docker · Cloud Run
+
 [Live](https://sauti-ya-mwananchi-mu44pr45ha-uc.a.run.app) · [GitHub](https://github.com/SuperiorKe/sauti-ya-mwananchi)
 
 ---
 
-### Eliana Textiles — Nairobi SMB storefront
-*Luxury bedding storefront with serverless backend and full test coverage · Built in 2 days with AI Studio + Claude Code*
+### AgentGovernance
+**Governance infrastructure for AI agents**
 
-Storefront for a Nairobi-based bedding brand at OTC Wholesale Mall. React 19 + Vite + Vercel serverless functions, with Playwright E2E and Vitest unit tests covering the catalog and checkout flows.
+An infrastructure layer between AI agents and the systems they act on.
 
-**Stack:** React 19 · TypeScript · Vite · Tailwind 4 · Vercel serverless · Playwright · Vitest
-[Live](https://eliana-textiles.vercel.app) · [GitHub](https://github.com/SuperiorKe/eliana-textiles)
-
----
-
-### Agent Governance Platform — zero-trust HITL infrastructure
-*Rule engine, audit log, and Socket.io approvals for AI agents*
-
-An infrastructure layer between AI agents and the systems they act on. Agents submit proposed actions; a deterministic rule engine auto-approves, blocks, or routes to a human via a real-time dashboard. Every decision is audited. NPM monorepo, Express + Knex + SQLite + Socket.io, lifecycle sweep workers.
+Agents submit proposed actions to a deterministic policy engine which can approve, block, or route actions to a human for review. Decisions are recorded for auditability and surfaced through a real-time dashboard.
 
 **Stack:** Node.js · Express · Knex · SQLite · Socket.io · React · Vite
+
 [GitHub](https://github.com/SuperiorKe/AgentGovernance)
 
 ---
 
-### Afrimall — production e-commerce platform
-*Full-stack commerce shipped end-to-end for a US client*
+### AI-agent
+**LLM agent with tools, browsing, and verification**
 
-Next.js 15 + Payload CMS storefront, admin, and API in one app. PostgreSQL, Stripe checkout with webhook reconciliation, transactional email, deployed on Vercel. Real customers, real transactions.
+An LLM-powered agent built with Python and LangGraph/LangChain. The system evolved through iterative development to include web browsing, tool-oriented workflows, platform-specific prompt constitutions, security filtering, and automated testing.
 
-**Stack:** Next.js 15 · TypeScript · Payload CMS · PostgreSQL · Stripe · Vercel
+**Stack:** Python · LangGraph · LangChain · Gemini · OpenAI · Anthropic · Web tools
+
+[GitHub](https://github.com/SuperiorKe/AI-agent)
+
+---
+
+### BimaCheck
+**USSD insurance fraud screening and payments**
+
+A deterministic fraud-screening workflow connecting USSD intake, rule-based decisions, SMS, and M-Pesa B2C payouts.
+
+The system handles asynchronous processing, callback timing, duplicate-payment risk, test credentials, and auditability, with unit, integration, and smoke testing.
+
+**Stack:** Python · USSD · Africa's Talking · M-Pesa Daraja · SQLite · Pytest
+
+[GitHub](https://github.com/SuperiorKe/BimaCheck)
+
+---
+
+### Afrimall
+**Full-stack e-commerce platform**
+
+A full-stack commerce platform built and shipped for an international client. The system covers product management, payments, storage, transactional workflows, and deployment.
+
+**Stack:** Next.js · TypeScript · Payload CMS · PostgreSQL · Stripe · Vercel
+
 [Live](https://afrimall.app) · [GitHub](https://github.com/SuperiorKe/afrimall)
 
 ---
 
-### ParkaSmart — parking ops for African malls
-*Replaces handwritten ledger books with USSD/SMS*
+### ParkaSmart
+**USSD/SMS parking operations**
 
-Replaces handwritten parking ledger books in commercial properties. Real-time vehicle logging, automated payment tracking, end-of-day SMS reports to managers. Built for the Africa's Talking Real Estate Hackathon 2026.
+A mobile-first parking management system designed to replace handwritten parking records with digital workflows.
 
-**Stack:** Next.js 16 · TypeScript · Drizzle ORM · SQLite · Africa's Talking (SMS/USSD/Airtime)
+It supports vehicle logging, operational dashboards, reporting, and SMS/USSD workflows.
+
+**Stack:** Next.js · TypeScript · Drizzle · SQLite · Africa's Talking
+
 [GitHub](https://github.com/SuperiorKe/ParkaSmart)
 
 ---
 
-### RentPay — USSD rent collection
-*M-Pesa STK Push and SMS invoicing on feature phones*
+## Engineering focus
 
-USSD-based rent payment for Kenyan landlords. Tenants pay rent over a basic phone via M-Pesa STK Push; landlords send invoices and track payments through a Flask dashboard. No app, no data plan required.
+I am particularly interested in:
 
-**Stack:** Python · Flask · M-Pesa Daraja API · Africa's Talking · SQLite
-[GitHub](https://github.com/SuperiorKe/RentPay)
+- Reliable agentic systems
+- Agent evaluation and regression testing
+- Context and tool design
+- Grounded generation
+- AI governance and human-in-the-loop systems
+- Agent memory and retrieval
+- Backend and API engineering
+- Cloud AI infrastructure
+- AI-assisted software engineering
 
 ---
 
 ## Stack
 
-```
+```text
 Languages       Python · TypeScript · JavaScript · SQL
-Backend         FastAPI · Flask · Express · Next.js (App Router) · Payload CMS
-Frontend        React · Next.js · Tailwind
-Data            PostgreSQL · SQLite · Drizzle · Knex
-Cloud           AWS · Google Cloud (Cloud Run, Vertex AI) · Vercel
+Backend         FastAPI · Flask · Django · Express · Next.js
+Frontend        React · Next.js · Tailwind CSS
+Data            PostgreSQL · SQLite · Supabase · Drizzle · Knex
+AI / Agents     Google ADK · Gemini · LangGraph · LangChain · Anthropic
+Cloud           AWS · Google Cloud · Cloud Run · Vertex AI · Vercel
 Infrastructure  Docker · GitHub Actions
-Telco / Mobile  Africa's Talking (SMS/USSD/Airtime) · M-Pesa Daraja
-AI / Agents     Claude Code · Anthropic SDK · Google ADK · Gemini · LangChain
-```
-
----
-
-## Certifications
-
-- **AWS Certified Cloud Practitioner** — Oct 2024
-- **AWS Academy Graduate, Cloud Foundations** — Dec 2024
-- **Africa's Talking × Google AI Program** — Oct 2025
-- **Kubernetes and Cloud Native Associate (KCNA)** — in progress
-
----
-
-## What I'm looking for
-
-AI Engineer, founding engineer, or Developer Relations roles at early-stage startups where shipping fast matters. I land opportunities through building in public — not cold applications. If you're building for Africa or other high-constraint environments, or need someone who can direct AI agents to ship real product fast, let's talk.
-
----
-
-## Contact
-
-- superiorwech@gmail.com
-- [LinkedIn](https://linkedin.com/in/kenn-macharia)
-- [SuperiaTech](https://superiatech.vercel.app/)
-- Nairobi, Kenya · open to remote
-
----
-
-*The best technology disappears into the background and helps people get their work done better.*
+Integrations    Africa's Talking · M-Pesa Daraja · Stripe
+Testing         Pytest · Vitest · Playwright · Testing Library
