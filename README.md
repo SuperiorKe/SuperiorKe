@@ -10,6 +10,8 @@ I use AI coding agents such as Claude Code, Gemini, and Codex to move faster, wh
 
 Based in Nairobi, Kenya. Open to remote opportunities.
 
+[Email](mailto:superiorwech@gmail.com) · [LinkedIn](https://linkedin.com/in/kenn-macharia)
+
 ---
 
 ## Selected work
@@ -23,7 +25,7 @@ A deterministic validation layer checks responses for required citations and can
 
 **Stack:** Python · FastAPI · Google ADK · Gemini · Vertex AI · Docker · Cloud Run
 
-[Live](https://sauti-ya-mwananchi-mu44pr45ha-uc.a.run.app) · [GitHub](https://github.com/SuperiorKe/sauti-ya-mwananchi)
+[GitHub](https://github.com/SuperiorKe/sauti-ya-mwananchi)
 
 ---
 
@@ -56,9 +58,9 @@ An LLM-powered agent built with Python and LangGraph/LangChain. The system evolv
 
 A deterministic fraud-screening workflow connecting USSD intake, rule-based decisions, SMS, and M-Pesa B2C payouts.
 
-The system handles asynchronous processing, callback timing, duplicate-payment risk, test credentials, and auditability, with unit, integration, and smoke testing.
+The system handles asynchronous processing, callback timing, duplicate-payment risk, and auditability, with unit and integration tests.
 
-**Stack:** Python · USSD · Africa's Talking · M-Pesa Daraja · SQLite · Pytest
+**Stack:** Node.js · Express · USSD · Africa's Talking · M-Pesa Daraja · SQLite
 
 [GitHub](https://github.com/SuperiorKe/BimaCheck)
 
@@ -85,6 +87,19 @@ It supports vehicle logging, operational dashboards, reporting, and SMS/USSD wor
 **Stack:** Next.js · TypeScript · Drizzle · SQLite · Africa's Talking
 
 [GitHub](https://github.com/SuperiorKe/ParkaSmart)
+
+---
+
+### Shutter Log
+**Offline-first repair logging for OTC Mall**
+
+An offline-first progressive web app for logging roller-shutter repairs in the field at OTC Mall, Nairobi. Built to be used one-handed, standing at a stall.
+
+Records live entirely on the device through IndexedDB, work fully offline, and sync additive repair data to a spreadsheet when a connection is available.
+
+**Stack:** React · Vite · IndexedDB · localforage · PWA · Vitest · oxlint
+
+[GitHub](https://github.com/SuperiorKe/shutter-log)
 
 ---
 
@@ -115,5 +130,5 @@ AI / Agents     Google ADK · Gemini · LangGraph · LangChain · Anthropic
 Cloud           AWS · Google Cloud · Cloud Run · Vertex AI · Vercel
 Infrastructure  Docker · GitHub Actions
 Integrations    Africa's Talking · M-Pesa Daraja · Stripe
-Testing         Pytest · Vitest · Playwright · Testing Library 
-
+Testing         Pytest · Vitest · Playwright · Testing Library · Node test runner
+```
